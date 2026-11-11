@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="title desc">
+<title id="title">Landscaping website planning workspace</title>
+<desc id="desc">Original vector illustration of a laptop showing a fictional landscaping company website, with a quote form, cost calculator, notes, plant and coffee cup. This is not a product screenshot.</desc>
+<defs>
+ <linearGradient id="back" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#EAF4ED"/><stop offset="1" stop-color="#BDDFC9"/></linearGradient>
+ <linearGradient id="surface" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#EAD5BA"/><stop offset="1" stop-color="#B98967"/></linearGradient>
+ <linearGradient id="landscape" x1="0" x2=".8" y1="0" y2="1"><stop stop-color="#C6E3E7"/><stop offset=".48" stop-color="#D9E6B6"/><stop offset="1" stop-color="#629573"/></linearGradient>
+ <linearGradient id="laptop" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#33483C"/><stop offset="1" stop-color="#14291F"/></linearGradient>
+ <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="15" stdDeviation="18" flood-color="#304B39" flood-opacity=".19"/></filter>
+ <filter id="smallshadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#304B39" flood-opacity=".15"/></filter>
+</defs>
+<rect width="1200" height="675" fill="url(#back)"/>
+<circle cx="1070" cy="105" r="168" fill="#F8FFF5" opacity=".38"/>
+<circle cx="135" cy="102" r="136" fill="#F6FFF7" opacity=".35"/>
+<path d="M0 480 Q600 452 1200 480 V675 H0Z" fill="url(#surface)"/>
+<path d="M0 480 Q600 454 1200 480" stroke="#AC8464" stroke-width="3" opacity=".35" fill="none"/>
+<g filter="url(#shadow)">
+ <rect x="230" y="87" width="730" height="455" rx="28" fill="url(#laptop)"/>
+ <rect x="247" y="107" width="696" height="413" rx="14" fill="#FCFCF7"/>
+ <circle cx="592" cy="96" r="3.6" fill="#A1B5A9"/>
+ <rect x="247" y="107" width="696" height="48" rx="13" fill="#FFFFFF"/>
+ <rect x="247" y="145" width="696" height="10" fill="#FFFFFF"/>
+ <g font-family="Arial,Helvetica,sans-serif">
+  <circle cx="276" cy="130" r="10" fill="#2F8B5F"/>
+  <text x="295" y="136" font-size="18" font-weight="700" fill="#173B2E">GREENFIELD</text>
+  <text x="624" y="134" font-size="12" fill="#668074">SERVICES</text>
+  <text x="706" y="134" font-size="12" fill="#668074">PROJECTS</text>
+  <rect x="806" y="116" rx="12" width="114" height="26" fill="#25845A"/>
+  <text x="863" y="134" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">GET A QUOTE</text>
+ </g>
+ <rect x="265" y="170" width="660" height="198" rx="13" fill="url(#landscape)"/>
+ <path d="M265 299 Q358 228 450 287 T654 274 T925 270 V368 H265Z" fill="#8FC68A"/>
+ <path d="M265 342 Q414 283 527 348 T792 322 T925 339 V368 H265Z" fill="#5EAD74"/>
+ <path d="M552 342 Q607 304 710 317 Q794 327 925 352 V368 H535Z" fill="#CFBEA1"/>
+ <path d="M594 283 L664 224 L734 283Z" fill="#9E8069"/>
+ <rect x="606" y="278" width="118" height="66" rx="3" fill="#FBF5E9"/>
+ <rect x="620" y="289" width="33" height="36" rx="2" fill="#8BB3B0"/>
+ <rect x="670" y="296" width="36" height="48" rx="2" fill="#9C7A5F"/>
+ <g fill="#357D4B"><circle cx="340" cy="312" r="33"/><circle cx="374" cy="326" r="30"/><circle cx="826" cy="303" r="32"/><circle cx="856" cy="322" r="31"/></g>
+ <rect x="285" y="188" width="300" height="114" rx="12" fill="#FFFFFF" opacity=".94"/>
+ <g font-family="Arial,Helvetica,sans-serif">
+  <text x="304" y="218" font-size="12" fill="#277C52" font-weight="700">OUTDOOR SPACES, DONE RIGHT</text>
+  <text x="304" y="244" font-size="21" fill="#213D2E" font-weight="700">A landscape that</text>
+  <text x="304" y="267" font-size="21" fill="#213D2E" font-weight="700">works for you</text>
+ </g>
+ <g font-family="Arial,Helvetica,sans-serif">
+  <rect x="266" y="383" width="206" height="120" rx="12" fill="#F0F5EE"/>
+  <rect x="492" y="383" width="205" height="120" rx="12" fill="#F0F5EE"/>
+  <rect x="717" y="383" width="207" height="120" rx="12" fill="#F0F5EE"/>
+  <circle cx="302" cy="411" r="13" fill="#B4DEBE"/><path d="M297 411l4 4 9-10" fill="none" stroke="#206447" stroke-width="3"/>
+  <circle cx="528" cy="411" r="13" fill="#B4DEBE"/><path d="M523 411l4 4 9-10" fill="none" stroke="#206447" stroke-width="3"/>
+  <circle cx="753" cy="411" r="13" fill="#B4DEBE"/><path d="M748 411l4 4 9-10" fill="none" stroke="#206447" stroke-width="3"/>
+  <text x="284" y="448" font-size="16" font-weight="700" fill="#254734">Request estimates</text>
+  <text x="510" y="448" font-size="16" font-weight="700" fill="#254734">Show real projects</text>
+  <text x="735" y="448" font-size="16" font-weight="700" fill="#254734">Service areas</text>
+  <rect x="285" y="460" width="145" height="7" rx="3" fill="#A3BCAF"/>
+  <rect x="510" y="460" width="156" height="7" rx="3" fill="#A3BCAF"/>
+  <rect x="735" y="460" width="143" height="7" rx="3" fill="#A3BCAF"/>
+  <rect x="285" y="476" width="110" height="6" rx="3" fill="#D0DCD2"/>
+  <rect x="510" y="476" width="116" height="6" rx="3" fill="#D0DCD2"/>
+  <rect x="735" y="476" width="115" height="6" rx="3" fill="#D0DCD2"/>
+ </g>
+ <path d="M189 540 L1003 540 L1068 576 Q1076 582 1060 586 L134 586 Q118 585 127 577Z" fill="#4B5F54"/>
+ <path d="M229 545 L963 545 L1006 568 L180 568Z" fill="#B4BCB6"/>
+ <path d="M452 565h280l-22 11H474Z" fill="#899A90"/>
+</g>
+<g filter="url(#smallshadow)" transform="rotate(7 1040 488)">
+ <rect x="968" y="395" width="160" height="195" rx="19" fill="#273B30"/>
+ <rect x="980" y="413" width="136" height="154" rx="8" fill="#F7FBF8"/>
+ <rect x="993" y="432" width="110" height="16" rx="6" fill="#DAE9DE"/>
+ <rect x="993" y="460" width="98" height="10" rx="4" fill="#D5E3D8"/>
+ <rect x="993" y="480" width="104" height="10" rx="4" fill="#D5E3D8"/>
+ <rect x="993" y="503" width="106" height="33" rx="9" fill="#2B8B5D"/>
+ <g font-family="Arial,Helvetica,sans-serif" fill="#FFFFFF" font-size="11" font-weight="700"><text x="1046" y="524" text-anchor="middle">REQUEST QUOTE</text></g>
+</g>
+<g filter="url(#smallshadow)" transform="rotate(-9 180 515)">
+ <rect x="55" y="390" width="197" height="213" rx="15" fill="#FFFDF7"/>
+ <rect x="75" y="417" width="91" height="13" rx="6" fill="#2C855B"/>
+ <g fill="#B8C9BB"><rect x="75" y="449" width="134" height="7" rx="3"/><rect x="75" y="473" width="134" height="7" rx="3"/><rect x="75" y="497" width="134" height="7" rx="3"/><rect x="75" y="521" width="134" height="7" rx="3"/></g>
+ <g stroke="#2A8154" stroke-width="3" fill="none"><path d="M75 447l5 5 10-12"/><path d="M75 471l5 5 10-12"/><path d="M75 495l5 5 10-12"/></g>
+</g>
+<g filter="url(#smallshadow)">
+ <ellipse cx="1040" cy="616" rx="87" ry="18" fill="#866B50" opacity=".17"/>
+ <rect x="1034" y="312" width="32" height="130" rx="8" fill="#B98967"/>
+ <path d="M1050 325 Q1010 306 989 271 Q1033 264 1050 308 Q1048 255 1082 223 Q1096 276 1055 315 Q1098 292 1139 311 Q1117 345 1060 330" fill="#2A8051"/>
+ <path d="M1049 342 Q1000 336 977 358 Q995 389 1050 359 Q1101 334 1138 365 Q1120 392 1050 360" fill="#43966A"/>
+ <path d="M1012 425H1087L1077 500H1021Z" fill="#FAFBF5"/>
+ <ellipse cx="1050" cy="425" rx="38" ry="8" fill="#D3DBCF"/>
+</g>
+<g filter="url(#smallshadow)"><ellipse cx="790" cy="617" rx="86" ry="16" fill="#7D664E" opacity=".19"/><ellipse cx="789" cy="583" rx="61" ry="21" fill="#F5F5ED"/><rect x="731" y="542" width="116" height="40" rx="12" fill="#FFFFFF"/><ellipse cx="789" cy="544" rx="57" ry="17" fill="#FFFFFF"/><ellipse cx="790" cy="544" rx="44" ry="11" fill="#9B664A"/><path d="M848 551q42 -8 24 21q-9 11 -28 3" stroke="#FFFFFF" stroke-width="12" fill="none"/></g>
+</svg>
