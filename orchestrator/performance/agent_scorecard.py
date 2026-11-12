@@ -88,28 +88,48 @@ def validate_evaluations(records: list[dict], roles: set[str]) -> None:
             raise ValueError(f"Evaluation {eid}: diagnosis must be text")
         # These are reviewer-reported scores, not cryptographically verified testimony.
 
-def dated_alerts(events: list[dict], today: date) -> dict[str, list[dict]]:
+def dated_alerts(events: list[dict], today: date, role_ids: set[str] | None = None) -> dict[str, list[dict]]:
+    """Convert dated evidence to signals, including cross-role typed defect reports.
+
+    ROLE_QUALITY_DEFECT must identify an affected registered role, actual
+    evidence references and a reproducible issue_code. It is an alert, not a
+    numeric evaluation or automatic finding of blame.
+    """
     result: dict[str, list[dict]] = defaultdict(list)
     seen = set()
     for event in events:
         name = event.get("event")
-        if name not in ISSUE_RULES:
+        if name in ISSUE_RULES:
+            role, kind = ISSUE_RULES[name]
+            severity = "P1"
+            refs = [event.get("review") or event.get("source") or "orchestrator/state/events.jsonl"]
+        elif name == "ROLE_QUALITY_DEFECT":
+            role, kind = event.get("affected_role"), event.get("issue_code")
+            severity = event.get("severity", "P2")
+            refs = event.get("evidence_refs")
+            if (not isinstance(role, str) or not isinstance(kind, str) or not kind.strip()
+                    or not isinstance(refs, list) or not refs
+                    or any(not isinstance(ref, str) or not ref.strip() for ref in refs)
+                    or severity not in {"P0", "P1", "P2", "P3"}):
+                raise ValueError("ROLE_QUALITY_DEFECT requires role, issue_code, severity and evidence_refs")
+        else:
             continue
+        if role_ids is not None and role not in role_ids:
+            raise ValueError(f"Unknown role in quality event: {role}")
         try:
             day = date.fromisoformat(str(event.get("at", ""))[:10])
-        except ValueError:
-            continue
+        except ValueError as exc:
+            raise ValueError(f"Quality event has invalid date: {name}") from exc
         if not (today - timedelta(days=WARN_DAYS) <= day <= today):
             continue
-        role, kind = ISSUE_RULES[name]
         key = (role, kind, event.get("task_id") or event.get("id"), day.isoformat())
         if key in seen:
             continue
         seen.add(key)
         result[role].append({
-            "kind": kind, "event": name,
+            "kind": kind, "event": name, "severity": severity,
             "task": event.get("task_id") or event.get("id") or "unattributed",
-            "date": day.isoformat(),
+            "date": day.isoformat(), "evidence_refs": refs,
             "source": "GitHub event log (not independent impact review)",
         })
     return result
@@ -138,7 +158,7 @@ def rating_for_role(role: str, records: list[dict], alerts: list[dict], today: d
         # "5/5" recognition requires robust quality, not 5 tasks and blind optimism.
         if composite >= 4.85 and min(averages.values()) >= 4.7 and not alerts:
             level = "5/5 EXCELLENCE (evidence-based recognition)"
-        elif composite < 4.0 or len(alerts) >= 2:
+        elif composite < 4.0 or len(alerts) >= 2 or any(x.get("severity") == "P0" for x in alerts):
             level = "IMPROVEMENT REQUIRED"
         elif composite >= 4.5 and not alerts:
             level = "STRONG"
@@ -147,6 +167,8 @@ def rating_for_role(role: str, records: list[dict], alerts: list[dict], today: d
         result["level"] = level
         if composite < 4.0 and not result["interventions"]:
             result["interventions"] = ["AES-00: compare five concrete failure cases, isolate the lowest-scoring dimension, draft one targeted candidate skill; independent QAD + CEO activation required."]
+    elif any(x.get("severity") == "P0" for x in alerts):
+        result["level"] = "UNRATED — critical quality defect requires investigation"
     elif len(alerts) >= 2:
         result["level"] = "UNRATED — remediation priority from observed defects"
     return result
@@ -156,7 +178,7 @@ def build_report(registry: dict, evaluations: list[dict], events: list[dict], to
     if len(roles) != len(set(roles)):
         raise ValueError("Duplicate role IDs")
     validate_evaluations(evaluations, set(roles))
-    alerts = dated_alerts(events, today)
+    alerts = dated_alerts(events, today, set(roles))
     ratings = [rating_for_role(role, evaluations, alerts.get(role, []), today) for role in roles]
     return {
         "date": today.isoformat(),
@@ -196,6 +218,9 @@ def markdown(report: dict) -> str:
             out.append(f"- {alert['date']} / {alert['task']} / {alert['event']} — **{alert['kind']}** (recorded event, impact not independently re-tested).")
         for action in role["interventions"]:
             out.append(f"- Proposed remedy: {action}")
+        for a in role["quality_alerts"]:
+            if a.get("event") == "ROLE_QUALITY_DEFECT" and a["kind"] not in ACTIONS:
+                out.append(f"- Diagnosis required for {a['kind']}: reproduce from {a['evidence_refs']} and draft a minimal targeted fix.")
     if not seen:
         out.append("No mapped defect signals in the last 30 days. This is not proof of perfect quality.")
     out += [

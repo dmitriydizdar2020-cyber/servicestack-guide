@@ -58,6 +58,20 @@ class AgentScorecardTests(unittest.TestCase):
         outcome=rating_for_role("EDT-01",[row(i) for i in range(2)],[],date(2026,11,12))
         self.assertIsNone(outcome["score_out_of_5"])
 
+    def test_generic_dated_quality_signal_for_any_registered_role(self):
+        events=[{"event":"ROLE_QUALITY_DEFECT","at":"2026-11-12","affected_role":"ANA-01",
+                 "issue_code":"unverified_metric_claim","severity":"P0",
+                 "task_id":"ANA-9","evidence_refs":["orchestrator/reviews/ANA-9.md"]}]
+        alerts=dated_alerts(events,date(2026,11,12),{"ANA-01"})["ANA-01"]
+        self.assertEqual(alerts[0]["severity"],"P0")
+        self.assertIn("critical",rating_for_role("ANA-01",[],alerts,date(2026,11,12))["level"])
+
+    def test_generic_event_rejects_missing_evidence(self):
+        with self.assertRaises(ValueError):
+            dated_alerts([{"event":"ROLE_QUALITY_DEFECT","at":"2026-11-12",
+                           "affected_role":"CEO-01","issue_code":"wrong_priority"}],
+                         date(2026,11,12),{"CEO-01"})
+
     def test_alerts_outside_window_ignored(self):
         issues=[{"event":"VISUAL_QA_CONTRAST_FIX","task_id":"ART-1","at":"2025-01-10"}]
         self.assertEqual(dated_alerts(issues,date(2026,11,12)),{})

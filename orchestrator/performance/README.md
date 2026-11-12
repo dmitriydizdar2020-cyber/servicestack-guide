@@ -39,3 +39,13 @@ Scheduled/commit GitHub Actions runs produce **read-only report artifacts**. The
 - Remediation candidate: EDT-01 v1.1 source/claim traceability and mobile visual readiness; a supporting static evidence guard can detect risky affiliate landing-page citations but is **not** a substitute for factual QA.
 
 **Risks:** Goodhart's law (optimizing score rather than helping readers), reviewer bias, superficial five-case tests, starvation of real publishing work. APS must never bypass existing noindex, safety or budget gates.
+
+## Reporting a defect for any of the nine roles
+
+Reviewers/operations can append a **verified, dated** typed event to the canonical events log, using the normal expected-HEAD SHA and readback policy:
+
+```json
+{"at":"2026-11-13","event":"ROLE_QUALITY_DEFECT","affected_role":"ANA-01","task_id":"ANA-EXAMPLE","issue_code":"unverified_metric_claim","severity":"P1","evidence_refs":["orchestrator/reviews/EXAMPLE.md"]}
+```
+
+This is **a schema example only**, not a real incident and must **not** be appended as factual evidence. For each of the nine role IDs, `ROLE_QUALITY_DEFECT` with a valid code, priority and evidence reference produces a dated alert. P0 invokes incident priority even after a single example. Numeric ratings still require five independent cases; the event cannot itself lower or improve a numerical score. The reviewer should distinguish underlying task constraints from role behavior.
