@@ -16,7 +16,8 @@ PAGES = ['index.html', 'about.html',
  'articles/landscaping-quote-request-form.html',
  'articles/landscaping-crm-guide.html',
  'articles/landscaping-estimate-follow-up-templates.html',
- 'articles/site123-vs-systeme-io-service-business.html']
+ 'articles/site123-vs-systeme-io-service-business.html',
+ 'articles/landscaping-homepage-guide.html']
 VIEWPORTS = (390, 768, 1280, 1440)
 
 class Handler(SimpleHTTPRequestHandler):
@@ -58,6 +59,13 @@ def check_tool(page, path):
         output = page.locator('#msg-out').inner_text()
         assert 'Taylor' in output and 'Example Landscape Co' in output
 
+    elif path.endswith('landscaping-homepage-guide.html'):
+        assert page.locator('meta[name="robots"]').get_attribute('content') == 'noindex,nofollow', 'New article must remain QA-gated'
+        page.locator('#brief-service').fill('Patios and drainage')
+        page.locator('#brief-area').fill('Example Town')
+        page.locator('#generate-homepage-brief').click()
+        draft = page.locator('#brief-output').input_value()
+        assert 'Patios and drainage in Example Town' in draft, 'Homepage brief builder did not respond'
     elif path.endswith('site123-vs-systeme-io-service-business.html'):
         visual_cards = page.locator('.comparison-visual-card')
         assert visual_cards.count() == 2, 'Two editorial image cards are required'

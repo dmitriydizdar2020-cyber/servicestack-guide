@@ -379,9 +379,9 @@
     {
       "id": "ART-0006",
       "title": "Landscaping homepage that wins quote requests: evidence-first sections",
-      "status": "ready",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -389,10 +389,31 @@
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/landscaping-homepage-guide.html",
-      "evidence": [],
+      "evidence": [
+        "Google Search Central SEO Starter Guide and people-first content guidance, checked 2026-11-12",
+        "Google Business Profile manage service areas, checked 2026-11-12",
+        "original local-only homepage brief builder"
+      ],
       "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
       "editorial_brief": "website structure, homepage sections, sample original copy, checklist; SITE123 contextual where warranted",
-      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261112-ART0006-HOMEPAGE-V1",
+      "next_owner": "OPS-01",
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/landscaping-homepage-guide.html",
+        "real_run_id": "EDT-20261112-ART0006-HOMEPAGE-V1",
+        "summary": "Original landscaping homepage blueprint, documented primary Google sources, labeled AI-generated illustrative asset, original no-network brief generator, linked buyer journey. Separate independent visual/factual QA required; keep noindex.",
+        "tests": "PRODUCER_HTML_REVIEW_ONLY; STATIC_AND_CHROMIUM_CI_PENDING; QAD_NOT_TESTED",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0007",
