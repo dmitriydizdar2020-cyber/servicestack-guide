@@ -68,6 +68,14 @@ def check_tool(page, path):
         image_urls = page.locator('main img').evaluate_all('(imgs) => imgs.map(i => i.getAttribute("src"))')
         assert len(set(image_urls)) == len(image_urls), f'Repeated images in the article: {image_urls}'
         assert page.locator('.comparison-visual-note').count() == 1, 'Photo origin must be disclosed'
+        assert page.locator('.comparison-table-wrap tbody tr').count() == 7, 'Expected seven comparison factors'
+        assert page.locator('.comparison-table-wrap td[data-label="SITE123"]').count() == 7, 'SITE123 comparison labels missing'
+        assert page.locator('.comparison-table-wrap td[data-label="Systeme.io"]').count() == 7, 'Systeme.io comparison labels missing'
+        if page.viewport_size['width'] <= 680:
+            is_card = page.locator('.comparison-table-wrap tbody tr').first.evaluate('(row) => getComputedStyle(row).display == "block"')
+            assert is_card, 'Mobile comparison must stack as readable cards'
+            has_label = page.locator('.comparison-table-wrap td[data-label="SITE123"]').first.evaluate('(cell) => getComputedStyle(cell, "::before").content.includes("SITE123")')
+            assert has_label, 'Mobile comparison needs visible column labels'
         paid_links = page.locator('a[rel~="sponsored"]')
         assert paid_links.count() == 2, 'Expected exactly two disclosed affiliate CTAs'
         labels = [label.strip().lower() for label in paid_links.all_inner_texts()]

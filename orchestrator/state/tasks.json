@@ -346,7 +346,7 @@
       "priority": "P0",
       "owner": "QAD-01",
       "producer_role": "EDT-01",
-      "producer_run_id": "EDT-20261112-ART0005-VISUAL-V4",
+      "producer_run_id": "EDT-20261112-ART0005-VISUAL-V5",
       "next_owner": "OPS-01",
       "depends_on": [
         "SITE-0001",
@@ -370,9 +370,9 @@
         "to_role": "QAD-01",
         "status": "awaiting_qa",
         "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
-        "real_run_id": "EDT-20261112-ART0005-VISUAL-V4",
-        "summary": "Owner requested fully autonomous premium editorial treatment and removal of dated website-vs-funnel schematic; replaced it with two photographic concept cards within existing ServiceStack ivory/charcoal/ruby identity, removed repeated photo, added visual-source disclosure and a regression test prohibiting the schematic. Affiliate disclosures and sponsored link attributes retained.",
-        "tests": "STATIC_AND_CHROMIUM_PENDING; QA_PENDING; MOBILE_DESKTOP_SCREENSHOT_REVIEW_PENDING",
+        "real_run_id": "EDT-20261112-ART0005-VISUAL-V5",
+        "summary": "Owner requested fully autonomous premium editorial treatment and removal of dated website-vs-funnel schematic; replaced it with two photographic concept cards within existing ServiceStack ivory/charcoal/ruby identity, removed repeated photo, added visual-source disclosure and a regression test prohibiting the schematic. Affiliate disclosures and sponsored link attributes retained. Additional actual screenshot review revealed unreadable narrow three-column mobile table; converted to 7 responsive comparison cards with visible product labels below 680px, retained desktop semantic table, and added live CSS regression.",
+        "tests": "STATIC_PENDING; BROWSER_TEST_PENDING; DESKTOP_AND_MOBILE_VISUAL_PREVIEW_COMPLETE_FOR_V4; V5_VISUAL_PENDING; INDEPENDENT_QA_PENDING",
         "external_spend_usd": 0
       }
     }
