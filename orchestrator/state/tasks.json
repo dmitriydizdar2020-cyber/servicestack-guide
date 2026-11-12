@@ -11,9 +11,9 @@
     {
       "id": "ART-0001",
       "title": "Verify landscaping website builder buyer guide",
-      "status": "awaiting_qa",
+      "status": "qa_passed",
       "priority": "P0",
-      "owner": "QAD-01",
+      "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261112-2d957",
       "next_owner": "OPS-01",
@@ -27,19 +27,28 @@
         "commit:2d957e9cdf48c0d5dc239a176a00dcb2cdc6ae8c"
       ],
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "OPS-01",
+        "status": "qa_passed",
         "artifact_path": "articles/website-builder-landscaping-business.html",
-        "source_commit": "2d957e9cdf48c0d5dc239a176a00dcb2cdc6ae8c",
-        "real_run_id": "editorial-20261112-2d957",
-        "summary": "Replaced Hostinger affiliate landing page with official website-builder contact-form documentation and plan/renewal source; dated primary-source evidence now present; independent QA and real responsive run still required",
-        "tests": "Hostinger official source checked in public web search; first Chromium smoke caught lazy-image test race to be corrected; independent visual/factual PASS not yet granted",
+        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
+        "real_run_id": "QAD-20261112-INLINE-ART0001",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0001.md",
+        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
+        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "PASS",
+        "reviewer_role": "QAD-01",
+        "real_run_id": "QAD-20261112-INLINE-ART0001",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0001.md",
+        "date": "2026-11-12",
+        "source_check": "PASS",
+        "responsive_browser": "PASS_390_768_1280_1440",
+        "interactive_browser": "PASS",
+        "human_visual_screenshot_review": "NOT_TESTED",
+        "ci_run": "43225589017"
       },
       "qa_history": [
         {
@@ -56,9 +65,9 @@
     {
       "id": "ART-0002",
       "title": "Verify landscaping lead intake form guide",
-      "status": "awaiting_qa",
+      "status": "qa_passed",
       "priority": "P0",
-      "owner": "QAD-01",
+      "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261111-forms",
       "next_owner": "OPS-01",
@@ -71,22 +80,36 @@
         "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"
       ],
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "evidence": "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225",
-        "summary": "Rebuilt in editorial journal v3; form generator and claims unverified by separate QA"
+        "from_role": "QAD-01",
+        "to_role": "OPS-01",
+        "status": "qa_passed",
+        "artifact_path": "articles/landscaping-quote-request-form.html",
+        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
+        "real_run_id": "QAD-20261112-INLINE-ART0002",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0002.md",
+        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
+        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "external_spend_usd": 0
       },
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "PASS",
+        "reviewer_role": "QAD-01",
+        "real_run_id": "QAD-20261112-INLINE-ART0002",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0002.md",
+        "date": "2026-11-12",
+        "source_check": "PASS",
+        "responsive_browser": "PASS_390_768_1280_1440",
+        "interactive_browser": "PASS",
+        "human_visual_screenshot_review": "NOT_TESTED",
+        "ci_run": "43225589017"
       }
     },
     {
       "id": "SITE-0001",
       "title": "Independent homepage and about-page visual/factual review",
-      "status": "awaiting_qa",
+      "status": "qa_passed",
       "priority": "P0",
-      "owner": "QAD-01",
+      "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261112-home",
       "next_owner": "OPS-01",
@@ -99,14 +122,28 @@
         "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"
       ],
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "evidence": "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225",
-        "summary": "Public home/about staged; separate independent responsive QA still pending"
+        "from_role": "QAD-01",
+        "to_role": "OPS-01",
+        "status": "qa_passed",
+        "artifact_path": "index.html",
+        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
+        "real_run_id": "QAD-20261112-INLINE-SITE0001",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-SITE0001.md",
+        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
+        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "external_spend_usd": 0
       },
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "PASS",
+        "reviewer_role": "QAD-01",
+        "real_run_id": "QAD-20261112-INLINE-SITE0001",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-SITE0001.md",
+        "date": "2026-11-12",
+        "source_check": "PASS",
+        "responsive_browser": "PASS_390_768_1280_1440",
+        "interactive_browser": "PASS",
+        "human_visual_screenshot_review": "NOT_TESTED",
+        "ci_run": "43225589017"
       }
     },
     {
@@ -164,9 +201,9 @@
     {
       "id": "ART-0003",
       "title": "Independent review of landscaping CRM buyer's guide and local tools",
-      "status": "awaiting_qa",
+      "status": "qa_passed",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "interactive-20261112-bec77025",
       "next_owner": "OPS-01",
@@ -180,26 +217,36 @@
         "orchestrator/reports/EDITORIAL_QA_REQUEST_2026-11-12.md"
       ],
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "source_commit": "bec77025a059f8184c8c7a157d17be02ad58eb63",
+        "from_role": "QAD-01",
+        "to_role": "OPS-01",
+        "status": "qa_passed",
         "artifact_path": "articles/landscaping-crm-guide.html",
-        "summary": "Draft prepared with source-backed HubSpot and Pipedrive comparison; local calculator and pipeline generator tested at 390px without final CSS; full responsive and factual QA pending.",
-        "tests": "Node JS syntax PASS; local Chrome functional interaction PASS; final production CSS responsive NOT TESTED; official source content to review independently",
-        "real_run_id": "interactive-20261112-bec77025",
+        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
+        "real_run_id": "QAD-20261112-INLINE-ART0003",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0003.md",
+        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
+        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "PASS",
+        "reviewer_role": "QAD-01",
+        "real_run_id": "QAD-20261112-INLINE-ART0003",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0003.md",
+        "date": "2026-11-12",
+        "source_check": "PASS",
+        "responsive_browser": "PASS_390_768_1280_1440",
+        "interactive_browser": "PASS",
+        "human_visual_screenshot_review": "NOT_TESTED",
+        "ci_run": "43225589017"
       }
     },
     {
       "id": "ART-0004",
       "title": "Independent review of estimate follow-up templates and browser-only builder",
-      "status": "awaiting_qa",
+      "status": "qa_passed",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "interactive-20261112-bec77025",
       "next_owner": "OPS-01",
@@ -213,18 +260,28 @@
         "orchestrator/reports/EDITORIAL_QA_REQUEST_2026-11-12.md"
       ],
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "source_commit": "bec77025a059f8184c8c7a157d17be02ad58eb63",
+        "from_role": "QAD-01",
+        "to_role": "OPS-01",
+        "status": "qa_passed",
         "artifact_path": "articles/landscaping-estimate-follow-up-templates.html",
-        "summary": "Six original templates and no-network message generator prepared; local JS tested at 390px; full final CSS, visual, privacy and factual QA pending.",
-        "tests": "Node JS syntax PASS; local Chrome functional interaction PASS; final production CSS responsive NOT TESTED; official source content to review independently",
-        "real_run_id": "interactive-20261112-bec77025",
+        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
+        "real_run_id": "QAD-20261112-INLINE-ART0004",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0004.md",
+        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
+        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "PASS",
+        "reviewer_role": "QAD-01",
+        "real_run_id": "QAD-20261112-INLINE-ART0004",
+        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0004.md",
+        "date": "2026-11-12",
+        "source_check": "PASS",
+        "responsive_browser": "PASS_390_768_1280_1440",
+        "interactive_browser": "PASS",
+        "human_visual_screenshot_review": "NOT_TESTED",
+        "ci_run": "43225589017"
       }
     }
   ]
