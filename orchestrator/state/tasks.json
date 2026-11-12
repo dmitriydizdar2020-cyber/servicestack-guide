@@ -11,14 +11,14 @@
     {
       "id": "ART-0001",
       "title": "Verify landscaping website builder buyer guide",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P0",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261111-builder",
-      "next_owner": "OPS-01",
+      "next_owner": "QAD-01",
       "depends_on": [],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/website-builder-landscaping-business.html",
@@ -26,14 +26,23 @@
         "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"
       ],
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "evidence": "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225",
-        "summary": "Rebuilt in editorial journal v3; not independently audited"
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "artifact_path": "articles/website-builder-landscaping-business.html",
+        "source_commit": "efdcdb101a5465ab5d9e772adca271b48ee73356",
+        "summary": "Replace Hostinger affiliate landing page with primary product/feature documentation; provide responsive and calculator test evidence; preserve noindex.",
+        "real_run_id": "QAD-20261112-1435-ART0001",
+        "external_spend_usd": 0
       },
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "evidence": "orchestrator/reviews/QAD-20261112-1435-ART0001.md",
+        "real_run_id": "QAD-20261112-1435-ART0001",
+        "date": "2026-11-12",
+        "source_check": "FAIL",
+        "visual_mobile": "NOT TESTED",
+        "interactive": "NOT TESTED"
       }
     },
     {
