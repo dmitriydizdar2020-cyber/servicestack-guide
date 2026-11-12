@@ -375,6 +375,276 @@
         "tests": "PRODUCER_VISUAL_REVIEW_PASS: real 1280px and 390px screenshots inspected incl. CTA legibility, photographic cards and stacked mobile table; STATIC_PASS + CHROMIUM_28_CASES_PASS in GitHub Actions 43237991576; PAGES_DEPLOY_SUCCESS 43237990367; INDEPENDENT_QAD_01_REVIEW_PENDING",
         "external_spend_usd": 0
       }
+    },
+    {
+      "id": "ART-0006",
+      "title": "Landscaping homepage that wins quote requests: evidence-first sections",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/landscaping-homepage-guide.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "website structure, homepage sections, sample original copy, checklist; SITE123 contextual where warranted",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0007",
+      "title": "Quote form or booking calendar for home-service contractors?",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "estimate workflow vs appointment scheduling, data minimization, vendor limitations; SITE123/Systeme.io only when relevant",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0008",
+      "title": "How to photograph landscaping projects for a trustworthy website",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/landscaping-project-photography-guide.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "ethical project photography rights, mobile gallery performance, original shot checklist; no fabricated client photos",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0009",
+      "title": "SITE123 launch checklist for a local service business",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/site123-local-service-launch-checklist.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "free vs paid feature gates, mobile SEO, real inquiry test, published terms, contextual tracked link",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0010",
+      "title": "Systeme.io free-plan setup for a service-business lead funnel",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/systeme-io-free-lead-funnel-guide.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "official free-tier limits, consent, form-to-inbox workflow, no fake live testing, contextual tracked link",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0011",
+      "title": "Google Business Profile for landscaping companies: service areas and verification",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/google-business-profile-landscapers.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "current official Google Business Profile guidance, eligibility, real address/service areas, fake-review prohibition",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0012",
+      "title": "Local service-area pages that actually help buyers",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/local-service-area-pages-seo-guide.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "location page examples with unique local service content, Google spam policy, no mass doorway pages",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0013",
+      "title": "Contractor contact-form emails: acknowledgement vs marketing automation",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/contractor-email-acknowledgement-vs-marketing.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "permission and privacy, transactional vs marketing distinction, check official deliverability and terms, Systeme.io contextual",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0014",
+      "title": "How landscapers can use YouTube without a production team",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/youtube-marketing-landscapers-vidiq-guide.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "original filming schedule, realistic outcomes, vidIQ features, screenshot-proven owner affiliate URL and attribution",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0015",
+      "title": "Zero-budget marketing stack for a one-person home-service company",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/zero-budget-service-business-software-stack.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "website, lead capture, CRM, follow-up; true free limits and hidden renewal risks",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0016",
+      "title": "Landscaping lead response times: build a system without fake promises",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/landscaping-lead-response-workflow.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "lead ownership, response scripts, opt-in SMS/email cautions, original response-time planner",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0017",
+      "title": "Contractor website navigation: service pages, gallery and contact that customers use",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/contractor-website-navigation-examples.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "mobile menus, accessibility, prominent service areas, example site structure",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0018",
+      "title": "Website builder migration checklist for small contractors",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/contractor-website-builder-migration.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "DNS, redirects, forms, lead loss, terms and export limits, screenshots where tested",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0019",
+      "title": "First 30 days of local SEO for landscaping companies",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/landscaping-local-seo-first-30-days.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "measurable owner actions from official Google sources, Search Console, no rankings guarantees",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+    },
+    {
+      "id": "ART-0020",
+      "title": "What to measure before paying for lead-generation software",
+      "status": "ready",
+      "priority": "P1",
+      "owner": "EDT-01",
+      "depends_on": [
+        "SITE-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/contractor-lead-generation-metrics.html",
+      "evidence": [],
+      "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
+      "editorial_brief": "definition of qualified lead, inquiry-to-estimate and estimate-to-sale rates, owner-input calculator",
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
     }
   ]
 }
