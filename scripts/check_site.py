@@ -59,6 +59,8 @@ def check(path):
     relative = path.relative_to(ROOT)
     parser = PageParser(relative)
     raw = path.read_text(encoding="utf-8")
+    if raw.lower().count("<!doctype html") != 1:
+        FAILURES.append(f"{relative}: expected exactly one DOCTYPE html")
     # All public-facing pages must inherit the publisher-wide visual contract.
     # This checks the shared CSS link, not subjective aesthetics or responsive rendering.
     expected_css = "../assets/editorial.css" if relative.parts[0] == "articles" else "assets/editorial.css"
