@@ -346,7 +346,7 @@
       "priority": "P0",
       "owner": "QAD-01",
       "producer_role": "EDT-01",
-      "producer_run_id": "EDT-20261112-ART0005-VISUAL-REVISION",
+      "producer_run_id": "EDT-20261112-ART0005-VISUAL-V4",
       "next_owner": "OPS-01",
       "depends_on": [
         "SITE-0001",
@@ -370,9 +370,9 @@
         "to_role": "QAD-01",
         "status": "awaiting_qa",
         "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
-        "real_run_id": "EDT-20261112-ART0005-VISUAL-REVISION",
-        "summary": "Fixed owner-flagged issue: editorial hero photograph, three informative in-article images including comparison diagram; natural product CTAs without parenthetic 'affiliate link'; clear top affiliate disclosure and sponsored rel preserved; responsive CSS and browser QA regression checks. Verified desktop/mobile screenshots revealed CSS specificity bug overriding CTA text with red; fixed via more-specific white contrast rule.",
-        "tests": "STATIC_PENDING; CHROMIUM_PENDING; HUMAN_VISUAL_PREVIEWED_DESKTOP_MOBILE; INDEPENDENT_QA_PENDING",
+        "real_run_id": "EDT-20261112-ART0005-VISUAL-V4",
+        "summary": "Owner requested fully autonomous premium editorial treatment and removal of dated website-vs-funnel schematic; replaced it with two photographic concept cards within existing ServiceStack ivory/charcoal/ruby identity, removed repeated photo, added visual-source disclosure and a regression test prohibiting the schematic. Affiliate disclosures and sponsored link attributes retained.",
+        "tests": "STATIC_AND_CHROMIUM_PENDING; QA_PENDING; MOBILE_DESKTOP_SCREENSHOT_REVIEW_PENDING",
         "external_spend_usd": 0
       }
     }

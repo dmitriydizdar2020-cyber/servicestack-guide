@@ -45,3 +45,41 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}button,input,te
 
 .editorial-article .editorial-disclosure a{text-decoration:underline;text-underline-offset:2px;color:#343f3e}
 @media(max-width:640px){.editorial-article .comparison-figure--diagram{margin:23px 0}.editorial-article .comparison-cta{width:100%;padding:14px 16px}.editorial-article .comparison-figure--landscape img,.editorial-article .comparison-figure--workspace img{aspect-ratio:1.5/1}}
+
+/* Comparison buyer guide: editorial photographic story cards. Scoped to one article. */
+.editorial-article .comparison-visual-stories{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;
+  margin:36px 0 6px;align-items:stretch
+}
+.editorial-article .comparison-visual-card{
+  overflow:hidden;border:1px solid #deded7;background:#fff;display:flex;flex-direction:column;
+  box-shadow:0 7px 22px rgba(26,30,28,.045)
+}
+.editorial-article .comparison-visual-card figure{margin:0}
+.editorial-article .comparison-visual-card img{
+  display:block;width:100%;height:auto;aspect-ratio:1.48/1;object-fit:cover
+}
+.editorial-article .comparison-visual-copy{padding:23px 24px 25px;flex:1;display:flex;flex-direction:column}
+.editorial-article .comparison-visual-eyebrow{
+  color:#9e302f;font-size:10px;font-weight:800;letter-spacing:.12em;line-height:1.4
+}
+.editorial-article .article-body .comparison-visual-copy h3{
+  margin:11px 0 9px;font:700 24px/1.18 var(--serif);letter-spacing:-.025em
+}
+.editorial-article .article-body .comparison-visual-copy p{
+  font-size:14px;line-height:1.65;margin:0 0 17px;color:#555d5b
+}
+.editorial-article .comparison-visual-key{
+  display:block;margin-top:auto;padding-top:15px;border-top:1px solid #e8e8e2;
+  font-size:10px;line-height:1.6;letter-spacing:.08em;font-weight:800;color:#293734
+}
+.editorial-article .comparison-visual-key i{color:#b23b38;font-style:normal;margin:0 4px}
+.editorial-article .article-body .comparison-visual-note{
+  margin:11px 0 36px;font-size:11px;line-height:1.5;color:#737a79
+}
+@media(max-width:650px){
+  .editorial-article .comparison-visual-stories{grid-template-columns:1fr;gap:17px;margin:27px 0 9px}
+  .editorial-article .comparison-visual-card img{aspect-ratio:1.8/1}
+  .editorial-article .comparison-visual-copy{padding:18px 19px 20px}
+  .editorial-article .article-body .comparison-visual-copy h3{font-size:25px}
+}

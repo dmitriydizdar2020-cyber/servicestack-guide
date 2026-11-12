@@ -59,9 +59,15 @@ def check_tool(page, path):
         assert 'Taylor' in output and 'Example Landscape Co' in output
 
     elif path.endswith('site123-vs-systeme-io-service-business.html'):
-        photos = page.locator('.article-body .comparison-figure img')
-        assert photos.count() >= 3, 'Guide needs useful in-article visuals, not just a hero'
+        visual_cards = page.locator('.comparison-visual-card')
+        assert visual_cards.count() == 2, 'Two editorial image cards are required'
+        assert page.locator('.comparison-visual-card img').count() == 2
         assert page.locator('.comparison-hero img').count() == 1, 'Hero photograph missing'
+        assert page.locator('.article-body .comparison-figure img').count() >= 1, 'At least one in-context photo must remain'
+        assert page.locator('img[src*="site-versus-funnel-editorial.svg"]').count() == 0, 'Rejected schematic illustration must not reappear'
+        image_urls = page.locator('main img').evaluate_all('(imgs) => imgs.map(i => i.getAttribute("src"))')
+        assert len(set(image_urls)) == len(image_urls), f'Repeated images in the article: {image_urls}'
+        assert page.locator('.comparison-visual-note').count() == 1, 'Photo origin must be disclosed'
         paid_links = page.locator('a[rel~="sponsored"]')
         assert paid_links.count() == 2, 'Expected exactly two disclosed affiliate CTAs'
         labels = [label.strip().lower() for label in paid_links.all_inner_texts()]
