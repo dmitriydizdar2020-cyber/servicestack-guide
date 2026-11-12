@@ -58,6 +58,17 @@ def check_tool(page, path):
         output = page.locator('#msg-out').inner_text()
         assert 'Taylor' in output and 'Example Landscape Co' in output
 
+    elif path.endswith('site123-vs-systeme-io-service-business.html'):
+        photos = page.locator('.article-body .comparison-figure img')
+        assert photos.count() >= 3, 'Guide needs useful in-article visuals, not just a hero'
+        assert page.locator('.comparison-hero img').count() == 1, 'Hero photograph missing'
+        paid_links = page.locator('a[rel~="sponsored"]')
+        assert paid_links.count() == 2, 'Expected exactly two disclosed affiliate CTAs'
+        labels = [label.strip().lower() for label in paid_links.all_inner_texts()]
+        assert all('affiliate link' not in label and 'referral' not in label for label in labels), f'Unnatural CTA labels: {labels}'
+        assert 'commission' in page.locator('.editorial-disclosure').inner_text().lower(), 'Paid relationship not disclosed'
+        assert page.locator('meta[name="robots"]').get_attribute('content') == 'noindex,nofollow', 'QA staging page must remain noindex'
+
 def main():
     screenshots = ROOT / 'qa_screenshots'
     screenshots.mkdir(exist_ok=True)

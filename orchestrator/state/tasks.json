@@ -346,7 +346,7 @@
       "priority": "P0",
       "owner": "QAD-01",
       "producer_role": "EDT-01",
-      "producer_run_id": "EDT-20261112-SITE123-SYSTEME",
+      "producer_run_id": "EDT-20261112-ART0005-VISUAL-REVISION",
       "next_owner": "OPS-01",
       "depends_on": [
         "SITE-0001",
@@ -370,9 +370,9 @@
         "to_role": "QAD-01",
         "status": "awaiting_qa",
         "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
-        "real_run_id": "EDT-20261112-SITE123-SYSTEME",
-        "summary": "New buyer guide, contextual affiliate disclosure, two owner-supplied tracked URLs; intentionally noindex pending independent editorial and browser QA; does not modify live indexed pages or sitemap.",
-        "tests": "SOURCE_DOCUMENTED; LOCAL_HTML_NOT_TESTED; BROWSER_CI_QUEUED; INDEPENDENT_QA_NOT_TESTED",
+        "real_run_id": "EDT-20261112-ART0005-VISUAL-REVISION",
+        "summary": "Fixed owner-flagged issue: editorial hero photograph, three informative in-article images including comparison diagram; natural product CTAs without parenthetic 'affiliate link'; clear top affiliate disclosure and sponsored rel preserved; responsive CSS and browser QA regression checks.",
+        "tests": "BROWSER_CI_PENDING; INDEPENDENT_QA_PENDING; USER_VISUAL_REVIEW_PENDING",
         "external_spend_usd": 0
       }
     }
