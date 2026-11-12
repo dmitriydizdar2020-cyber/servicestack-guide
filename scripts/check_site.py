@@ -6,7 +6,6 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import sys
-import re
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = sorted(ROOT.rglob("*.html"))
@@ -63,8 +62,7 @@ def check(path):
     # All public-facing pages must inherit the publisher-wide visual contract.
     # This checks the shared CSS link, not subjective aesthetics or responsive rendering.
     expected_css = "../assets/editorial.css" if relative.parts[0] == "articles" else "assets/editorial.css"
-    css_pattern = r'href="' + re.escape(expected_css) + r'(?:\\?[^"]*)?"'
-    if not re.search(css_pattern, raw):
+    if f'href="{expected_css}"' not in raw and f'href="{expected_css}?' not in raw:
         FAILURES.append(f"{relative}: missing shared Executive Editorial stylesheet {expected_css}")
     parser.feed(raw)
     if parser.h1s != 1:
