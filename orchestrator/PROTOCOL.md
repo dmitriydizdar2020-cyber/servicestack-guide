@@ -27,3 +27,6 @@ CEO: strategy, priority, critical escalations and owner memo. ORC: select next t
 
 ## Checkup acceptance
 Run all state-machine tests + static content QA + GitHub Actions checks, inspect actual workflow results and make a list of outstanding P0 blockers. Do not declare the whole organization "perfect" based only on green CI: functional user journeys, commercial eligibility, live analytics and independent editorial QA require distinct evidence.
+
+## Terminal non-public task state
+`completed` is a CLOSED state for verified research, analytics and internal reports; it is NOT `published` and cannot imply a public page is indexed or approved. Internal reports require actual evidence; public content still uses the independent QA -> `qa_passed` -> `published` release sequence.

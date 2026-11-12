@@ -104,4 +104,15 @@ class TestOrchestrator(unittest.TestCase):
             errors=o.validate(self.data,pathlib.Path(d))
             self.assertTrue(any(x['code']=='MISSING_ARTIFACT' for x in errors))
 
+
+
+class TestCompletedState(unittest.TestCase):
+    """Completed research/report task is closed but not a published website page."""
+    def test_completed_is_terminal_and_current_state_valid(self):
+        data = o.load_state()
+        self.assertIn('completed', o.VALID_STATES)
+        self.assertIn('completed', o.CLOSE_STATES)
+        self.assertNotIn('completed', o.ACTIVE_STATES)
+        self.assertFalse(any(issue['severity']=='CRITICAL' for issue in o.validate(data)), o.validate(data))
+
 if __name__=='__main__':unittest.main()

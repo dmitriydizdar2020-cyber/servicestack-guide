@@ -18,9 +18,9 @@ from typing import Any
 ROOT = pathlib.Path(__file__).resolve().parent
 DEFAULT_STATE = ROOT / 'state' / 'tasks.json'
 DEFAULT_EVENTS = ROOT / 'state' / 'events.jsonl'
-VALID_STATES = {'ready','claimed','awaiting_qa','rework','qa_passed','rejected','published','blocked','cancelled'}
+VALID_STATES = {'ready','claimed','awaiting_qa','rework','qa_passed','rejected','published','blocked','cancelled','completed'}
 VALID_ROLES = {'CEO-01','ORC-01','SID-00','EDT-01','OPS-01','QAD-01','COM-01','ANA-01','AES-00'}
-CLOSE_STATES = {'published','cancelled','rejected'}
+CLOSE_STATES = {'published','cancelled','rejected','completed'}
 ACTIVE_STATES = {'ready','rework','claimed','awaiting_qa','qa_passed','blocked'}
 ROLE_ORDER = ('OPS-01','EDT-01','SID-00','COM-01','ANA-01','AES-00')
 
