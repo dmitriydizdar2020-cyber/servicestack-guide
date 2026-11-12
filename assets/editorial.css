@@ -40,3 +40,68 @@
 .story-cover img{display:block;width:100%;height:100%;aspect-ratio:1.55/1;object-fit:cover}
 .story:first-child .story-cover img{object-position:79% center}
 .story .story-bottom{margin-top:auto}
+
+
+/* AffiliateOS Executive Editorial Design System v2.0 — shared for every publication.
+   Calm financial-publication feel, accessible long-form reading, no copied media identity.
+   The small set of variables below is the source of truth for future verticals. */
+:root{
+  --paper:#faf9f6;--surface:#fff;--ink:#191c20;--muted:#59636b;
+  --rule:#d8d9d5;--brand:#9e392f;--brand-ink:#234a42;
+  --reading-width:71ch;--page-width:1220px;
+}
+body{background:var(--paper);color:var(--ink);text-rendering:optimizeLegibility}
+.page-width{max-width:var(--page-width)}
+.wordmark{font-weight:700;letter-spacing:-.057em}
+.main-nav a{letter-spacing:.065em}
+.hero-copy .large-lede{font-size:clamp(18px,1.7vw,22px);line-height:1.6}
+.story h3{line-height:1.14}
+.story p{line-height:1.69}
+.article-body,.editorial-article .reading{
+  max-width:min(100%,var(--reading-width));
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:18px;line-height:1.78;
+  hyphens:auto;overflow-wrap:break-word;
+}
+.editorial-article .reading>p{margin-block:0 1.15em}
+.editorial-article .reading h2,.editorial-article .reading h3{hyphens:none;overflow-wrap:normal;text-wrap:balance}
+.editorial-article .reading h2{margin-top:2.2em;margin-bottom:.65em}
+.editorial-article .reading h3{margin-top:1.5em}
+.editorial-article .reading p,.editorial-article .reading li{line-height:1.78}
+.editorial-article .reading li+li{margin-top:12px}
+.editorial-article .reading strong{font-weight:720}
+.editorial-article .reading a{text-decoration-thickness:1px}
+.editorial-article .reading .key,.editorial-article .reading .takeaway{
+  background:transparent;border:1px solid var(--rule);border-left:4px solid var(--brand);
+  padding:24px 26px;margin:22px 0 30px;
+}
+.editorial-article .reading .key strong,.editorial-article .reading .takeaway strong{display:inline}
+.editorial-article .reading table{font-size:15px;line-height:1.5}
+.editorial-article .reading th,.editorial-article .reading td{padding:15px 17px}
+.editorial-article .reading img{object-fit:contain}
+.editorial-article .intro,.editorial-article .lede{max-width:45ch;font-size:clamp(19px,2vw,23px)}
+.editorial-article .meta{font-size:13px}
+.editorial-article .mast .disclosure,.editorial-article .hero .disclosure{
+  margin-block:25px 10px;color:#404b50;background:transparent;border:1px solid var(--rule);
+  border-left:3px solid var(--brand);line-height:1.65;
+}
+.editorial-article .reading .tool,.editorial-article .reading .calc{background:#f4f4f0;border:1px solid var(--rule)}
+.editorial-article .reading input,.editorial-article .reading select,.editorial-article .reading textarea{
+  max-width:100%;font-size:16px;
+}
+.editorial-article .reading .tablewrap,.editorial-article .reading .tableflow{
+  max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;
+}
+@media (max-width:760px){
+  .article-body,.editorial-article .reading{font-size:17px;line-height:1.74}
+  .editorial-article .reading p,.editorial-article .reading li{line-height:1.74}
+  .editorial-article .reading .key,.editorial-article .reading .takeaway{padding:18px}
+  .editorial-article .mast .disclosure,.editorial-article .hero .disclosure{padding:14px}
+  .main-nav{row-gap:12px}
+  .utility-right{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .story-cover img{transition:none}
+}
