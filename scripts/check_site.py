@@ -59,6 +59,11 @@ def check(path):
     relative = path.relative_to(ROOT)
     parser = PageParser(relative)
     raw = path.read_text(encoding="utf-8")
+    # All public-facing pages must inherit the publisher-wide visual contract.
+    # This checks the shared CSS link, not subjective aesthetics or responsive rendering.
+    expected_css = "../assets/editorial.css" if relative.parts[0] == "articles" else "assets/editorial.css"
+    if f'href="{expected_css}"' not in raw:
+        FAILURES.append(f"{relative}: missing shared Executive Editorial stylesheet {expected_css}")
     parser.feed(raw)
     if parser.h1s != 1:
         FAILURES.append(f"{relative}: expected one h1, got {parser.h1s}")
