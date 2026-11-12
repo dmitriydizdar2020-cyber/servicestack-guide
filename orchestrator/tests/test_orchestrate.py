@@ -98,7 +98,7 @@ class TestOrchestrator(unittest.TestCase):
         result=o.checkup(self.data)
         self.assertTrue(result['safe'])
         self.assertIn('does not invoke LLMs',result['limitations'][0])
-        self.assertEqual(5,result['metrics']['task_count'])
+        self.assertEqual(len(self.data['tasks']),result['metrics']['task_count'])
     def test_missing_artifact_detected(self):
         with tempfile.TemporaryDirectory() as d:
             errors=o.validate(self.data,pathlib.Path(d))
