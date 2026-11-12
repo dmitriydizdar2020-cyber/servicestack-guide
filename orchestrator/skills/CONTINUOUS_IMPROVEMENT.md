@@ -30,3 +30,6 @@ A technical role can investigate any lawful open-source project, but must docume
 4. GitHub Actions `checkout`/`upload-artifact` — ALREADY USED; pin their refs to verified full-length SHAs instead of mutable tags when changes are reviewed.
 
 Record test dates, not imaginary benchmarks. No hosted autonomous model runtime exists in this implementation. Existing 08:00 production and 14:00 independent QA are the LLM run gates; GitHub CI is deterministic.
+## Agent Performance System (APS 1.0)
+
+Use `orchestrator/performance/agent_scorecard.py` to surface dated issues and independent-review ratings. A role without five independent scored case evaluations remains NOT RATED. Real event signals trigger one targeted diagnosis and candidate improvement, never a guaranteed blame rating. Follow `orchestrator/performance/README.md` for root-cause triage, same-input five-case skill evaluations, QAD independence, CEO promotion and rollback. No rewards for output volume or false positivity, no automated activation of candidate skills.

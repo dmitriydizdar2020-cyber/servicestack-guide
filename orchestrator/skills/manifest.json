@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-12",
+  "updated_at": "2026-11-13",
   "scope": "Internal role knowledge packs, not native ChatGPT plugin skills, and do not create worker processes",
   "policy": "Each role has one versioned candidate SKILL.md. Independent QAD-01 five-case evaluation is mandatory before manifest promotion to approved. Future roles scaffold as DRAFT and require owner/CEO role activation process.",
   "skills": [
@@ -35,7 +35,7 @@
       "role_id": "EDT-01",
       "path": "skills/EDT-01/SKILL.md",
       "status": "candidate",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "approved_by": null,
       "approval_evidence": null,
       "evaluation_cases_passed": 0

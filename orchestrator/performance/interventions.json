@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-11-13",
+  "items": [
+    {
+      "id": "ECR-20261112-EDT-01-SOURCE-MOBILE",
+      "role_id": "EDT-01",
+      "status": "candidate_drafted_not_approved",
+      "severity": "P1",
+      "observed_incidents": ["QA_REWORK:ART-0001", "MOBILE_TABLE_REWORK:ART-0005", "VISUAL_QA_CONTRAST_FIX:ART-0005"],
+      "root_cause_hypotheses": ["source_to_claim_mapping_missing", "mobile_comparison_layout_not_checked_early", "computed_CTA_contrast_not_asserted_early"],
+      "remedies": ["EDT-01 candidate skill v1.1.0", "editorial source citation regression check", "existing 390px/1280px Chromium layout, image, interaction tests"],
+      "baseline_test_cases_needed": 5,
+      "baseline_cases_completed": 0,
+      "independent_QAD_status": "NOT_TESTED",
+      "activated": false,
+      "next_owner": "AES-00",
+      "release_guard": "Never auto-promote skills without independent QAD approval and CEO decision. Protect current ART-0005/ART-0006 review lane.",
+      "external_spend_usd": 0
+    }
+  ]
+}
