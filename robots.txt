@@ -1,0 +1,8 @@
+# GitHub Pages project-site note:
+# Crawlers consult https://dmitriydizdar2020-cyber.github.io/robots.txt
+# NOT the copy at /servicestack-guide/robots.txt.
+# Real indexing control is each page's robots meta tag.
+User-agent: *
+Allow: /servicestack-guide/
+
+Sitemap: https://dmitriydizdar2020-cyber.github.io/servicestack-guide/sitemap.xml
