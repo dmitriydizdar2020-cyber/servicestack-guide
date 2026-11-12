@@ -1,0 +1,1 @@
+{"at":"2026-11-12T00:00:00Z","event":"BASELINE_CREATED","actor":"ORC-01 specification","real_runtime_claim":false,"tasks_created":5,"note":"Initial tasks sourced from published repo; none independently QA-PASS. No LLMs have run through GitHub Actions."}

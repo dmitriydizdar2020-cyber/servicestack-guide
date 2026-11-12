@@ -1,0 +1,41 @@
+name: AffiliateOS orchestrator checkup
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'orchestrator/**'
+      - '.github/workflows/orchestrator-checkup.yml'
+      - 'articles/**'
+      - 'index.html'
+      - 'about.html'
+  schedule:
+    - cron: '17 7,14 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: affiliate-orchestrator-readonly
+  cancel-in-progress: false
+jobs:
+  test-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - name: Checkout owner repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Show Python version
+        run: python3 --version
+      - name: Test task coordination and QA safety
+        run: python3 -m unittest discover -s orchestrator/tests -p 'test_*.py' -v
+      - name: Generate verified task checkup
+        run: python3 orchestrator/orchestrate.py checkup --out orchestrator-checkup.json
+      - name: Preserve audit report as Actions artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: affiliate-orchestrator-checkup
+          path: orchestrator-checkup.json
+          if-no-files-found: warn
+          retention-days: 7

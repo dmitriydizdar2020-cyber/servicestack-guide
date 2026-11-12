@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-11-12T00:00:00Z",
+  "site": "dmitriydizdar2020-cyber/servicestack-guide",
+  "mission": "$100k+/month long-term; validated lawful business models, measured cash, owner autonomy and zero external spend",
+  "external_spend_ceiling_usd": 0,
+  "paid_affiliate_payout_confirmed": false,
+  "agent_execution_mode": "ChatGPT production at 08:00 Europe/Bucharest + independent QA at 14:00; GitHub health checks do not run LLMs",
+  "task_owner_policy": "Single assigned role at a time; only QAD-01 reviews; no QA pass without distinct run evidence; owner approves outside account/spending",
+  "tasks": [
+    {
+      "id": "ART-0001", "title": "Verify landscaping website builder buyer guide", "status": "awaiting_qa", "priority": "P0", "owner": "QAD-01", "producer_role": "EDT-01", "producer_run_id": "editorial-20261111-builder", "next_owner": "OPS-01", "depends_on": [], "attempts": 0, "max_attempts": 2, "spend_usd": 0,
+      "artifact_path": "articles/website-builder-landscaping-business.html", "evidence": ["commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"],
+      "handoff": {"from_role":"EDT-01","to_role":"QAD-01","evidence":"commit:e6fbe98c90770d3b5f235c026d1060b612d4b225","summary":"Rebuilt in editorial journal v3; not independently audited"},
+      "qa": {"decision":null,"evidence":null}
+    },
+    {
+      "id": "ART-0002", "title": "Verify landscaping lead intake form guide", "status": "awaiting_qa", "priority": "P0", "owner": "QAD-01", "producer_role": "EDT-01", "producer_run_id": "editorial-20261111-forms", "next_owner": "OPS-01", "depends_on": [], "attempts": 0, "max_attempts": 2, "spend_usd": 0,
+      "artifact_path": "articles/landscaping-quote-request-form.html", "evidence": ["commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"],
+      "handoff": {"from_role":"EDT-01","to_role":"QAD-01","evidence":"commit:e6fbe98c90770d3b5f235c026d1060b612d4b225","summary":"Rebuilt in editorial journal v3; form generator and claims unverified by separate QA"},
+      "qa": {"decision":null,"evidence":null}
+    },
+    {
+      "id": "SITE-0001", "title": "Independent homepage and about-page visual/factual review", "status": "awaiting_qa", "priority": "P0", "owner": "QAD-01", "producer_role": "EDT-01", "producer_run_id": "editorial-20261112-home", "next_owner": "OPS-01", "depends_on": [], "attempts": 0, "max_attempts": 2, "spend_usd": 0,
+      "artifact_path": "index.html", "evidence": ["commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"],
+      "handoff": {"from_role":"EDT-01","to_role":"QAD-01","evidence":"commit:e6fbe98c90770d3b5f235c026d1060b612d4b225","summary":"Public home/about staged; separate independent responsive QA still pending"},
+      "qa": {"decision":null,"evidence":null}
+    },
+    {
+      "id": "SID-0001", "title": "Evaluate one high-upside $0 opportunity outside affiliates", "status": "ready", "priority": "P2", "owner": "SID-00", "depends_on": [], "attempts": 0, "max_attempts": 2, "spend_usd": 0,
+      "artifact_path": null, "evidence": [], "commercial_hypotheses_allowed": ["digital products","micro-SaaS","B2B automation","store","software utilities","other lawful models"],
+      "acceptance": "Dated source evidence, buyer job, commercial eligibility and countercase, 7-day no-spend test, CEO decision; unknowns explicitly labeled"
+    },
+    {
+      "id": "ANA-0001", "title": "Prepare free indexation and measurement after individually passed releases", "status": "ready", "priority": "P1", "owner": "ANA-01", "depends_on": [], "attempts": 0, "max_attempts": 2, "spend_usd": 0,
+      "artifact_path": null, "evidence": [], "acceptance": "Exact indexation checklist and GSC ownership dependency, no fabricated traffic or payout metrics"
+    }
+  ]
+}

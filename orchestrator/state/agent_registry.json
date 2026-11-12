@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "as_of": "2026-11-12",
+  "mode": "role contracts in two scheduled ChatGPT jobs; Github Actions is deterministic and does not invoke LLMs",
+  "roles": [
+    {"id":"CEO-01","purpose":"prioritize and decide, surface verified owner proposals","may_decide":["task_priority","task_reassignment","free_experiment","reject_or_replace"],"cannot":["spend_money","approve_own_qa","invent_income"],"prompt":"prompts/CEO-01.md"},
+    {"id":"ORC-01","purpose":"route work and enforce state invariants","may_decide":["eligible_next_task","handoff_validation","dependency_alert"],"cannot":["override_QA","approve_spend","make_up_execution"],"prompt":"prompts/ORC-01.md"},
+    {"id":"SID-00","purpose":"discover and verify high-upside new opportunities","may_decide":["evidence_class","signal_recommendation"],"cannot":["autolaunch_paid","approve_partner_eligibility","claim_unknown_volume"],"prompt":"prompts/SID-00.md"},
+    {"id":"EDT-01","purpose":"produce excellent original buyer-facing media and tools","may_decide":["editorial_structure","original_visuals","free_content_updates"],"cannot":["self_QA","claim_hands_on_testing","publish_unapproved_legal_claims"],"prompt":"prompts/EDT-01.md"},
+    {"id":"OPS-01","purpose":"implement and deploy technically validated work","may_decide":["code_fix","free_deployment_after_QA","safe_rollback"],"cannot":["release_noindex_without_qa","paid_infrastructure","touch_BucharestUA"],"prompt":"prompts/OPS-01.md"},
+    {"id":"QAD-01","purpose":"independent acceptance, corrective feedback, veto","may_decide":["PASS","REWORK","REJECT"],"cannot":["author_same_artifact","grant_spending_permission","fabricate_tests"],"prompt":"prompts/QAD-01.md"},
+    {"id":"COM-01","purpose":"validate eligible monetization and commission economics","may_decide":["eligibility_assessment","partner_risk_flag"],"cannot":["auto_merchant_signup","invent_commission","spend_money"],"prompt":"prompts/COM-01.md"},
+    {"id":"ANA-01","purpose":"provide verified traffic/monetization/cash evidence","may_decide":["metric_status","tracking_instrumentation_plan"],"cannot":["invent_traffic","count_accrual_as_cash","claim_unconnected_access"],"prompt":"prompts/ANA-01.md"},
+    {"id":"AES-00","purpose":"reduce recurring agent defects with small evaluated prompt updates","may_decide":["draft_prompt_variant","evaluation_plan"],"cannot":["self_activate_prompts","create_live_workers_by_naming","bypass_independent_QA"],"prompt":"prompts/AES-00.md"}
+  ]
+}
