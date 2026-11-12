@@ -11,12 +11,12 @@
     {
       "id": "ART-0001",
       "title": "Verify landscaping website builder buyer guide",
-      "status": "qa_passed",
+      "status": "published",
       "priority": "P0",
       "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261112-2d957",
-      "next_owner": "OPS-01",
+      "next_owner": "ANA-01",
       "depends_on": [],
       "attempts": 1,
       "max_attempts": 2,
@@ -27,15 +27,14 @@
         "commit:2d957e9cdf48c0d5dc239a176a00dcb2cdc6ae8c"
       ],
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "OPS-01",
-        "status": "qa_passed",
+        "from_role": "OPS-01",
+        "to_role": "ANA-01",
+        "status": "published",
         "artifact_path": "articles/website-builder-landscaping-business.html",
-        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
-        "real_run_id": "QAD-20261112-INLINE-ART0001",
-        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0001.md",
-        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
-        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "source_commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "real_run_id": "OPS-20261112-GSC-RELEASE",
+        "summary": "Live GitHub Pages deployment and 24 Chromium cases SUCCESS; noindex removed only after independently recorded QAD PASS; canonical sitemap contains released page",
+        "tests": "GITHUB_PAGES_SUCCESS; BROWSER_24_PASS; SITEMAP_PASS; GSC_REALTIME_INDEXING_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
@@ -48,7 +47,8 @@
         "responsive_browser": "PASS_390_768_1280_1440",
         "interactive_browser": "PASS",
         "human_visual_screenshot_review": "NOT_TESTED",
-        "ci_run": "43225589017"
+        "ci_run": "43225589017",
+        "reviewer_run_id": "QAD-20261112-INLINE-ART0001"
       },
       "qa_history": [
         {
@@ -60,17 +60,28 @@
           "visual_mobile": "NOT TESTED",
           "interactive": "NOT TESTED"
         }
-      ]
+      ],
+      "deployment_proof": {
+        "commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "release_commit": "115e7d17492743f44b414e7ed7cee2aea66f02b1",
+        "github_pages_workflow": "43227068333",
+        "github_pages_result": "success",
+        "site_quality_workflow": "43227068847",
+        "site_quality_result": "success",
+        "site_url": "https://dmitriydizdar2020-cyber.github.io/servicestack-guide/",
+        "checked_on": "2026-11-12",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0002",
       "title": "Verify landscaping lead intake form guide",
-      "status": "qa_passed",
+      "status": "published",
       "priority": "P0",
       "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261111-forms",
-      "next_owner": "OPS-01",
+      "next_owner": "ANA-01",
       "depends_on": [],
       "attempts": 0,
       "max_attempts": 2,
@@ -80,15 +91,14 @@
         "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"
       ],
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "OPS-01",
-        "status": "qa_passed",
+        "from_role": "OPS-01",
+        "to_role": "ANA-01",
+        "status": "published",
         "artifact_path": "articles/landscaping-quote-request-form.html",
-        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
-        "real_run_id": "QAD-20261112-INLINE-ART0002",
-        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0002.md",
-        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
-        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "source_commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "real_run_id": "OPS-20261112-GSC-RELEASE",
+        "summary": "Live GitHub Pages deployment and 24 Chromium cases SUCCESS; noindex removed only after independently recorded QAD PASS; canonical sitemap contains released page",
+        "tests": "GITHUB_PAGES_SUCCESS; BROWSER_24_PASS; SITEMAP_PASS; GSC_REALTIME_INDEXING_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
@@ -101,18 +111,30 @@
         "responsive_browser": "PASS_390_768_1280_1440",
         "interactive_browser": "PASS",
         "human_visual_screenshot_review": "NOT_TESTED",
-        "ci_run": "43225589017"
+        "ci_run": "43225589017",
+        "reviewer_run_id": "QAD-20261112-INLINE-ART0002"
+      },
+      "deployment_proof": {
+        "commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "release_commit": "115e7d17492743f44b414e7ed7cee2aea66f02b1",
+        "github_pages_workflow": "43227068333",
+        "github_pages_result": "success",
+        "site_quality_workflow": "43227068847",
+        "site_quality_result": "success",
+        "site_url": "https://dmitriydizdar2020-cyber.github.io/servicestack-guide/",
+        "checked_on": "2026-11-12",
+        "external_spend_usd": 0
       }
     },
     {
       "id": "SITE-0001",
       "title": "Independent homepage and about-page visual/factual review",
-      "status": "qa_passed",
+      "status": "published",
       "priority": "P0",
       "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "editorial-20261112-home",
-      "next_owner": "OPS-01",
+      "next_owner": "ANA-01",
       "depends_on": [],
       "attempts": 0,
       "max_attempts": 2,
@@ -122,15 +144,14 @@
         "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"
       ],
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "OPS-01",
-        "status": "qa_passed",
+        "from_role": "OPS-01",
+        "to_role": "ANA-01",
+        "status": "published",
         "artifact_path": "index.html",
-        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
-        "real_run_id": "QAD-20261112-INLINE-SITE0001",
-        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-SITE0001.md",
-        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
-        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "source_commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "real_run_id": "OPS-20261112-GSC-RELEASE",
+        "summary": "Live GitHub Pages deployment and 24 Chromium cases SUCCESS; noindex removed only after independently recorded QAD PASS; canonical sitemap contains released page",
+        "tests": "GITHUB_PAGES_SUCCESS; BROWSER_24_PASS; SITEMAP_PASS; GSC_REALTIME_INDEXING_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
@@ -143,7 +164,19 @@
         "responsive_browser": "PASS_390_768_1280_1440",
         "interactive_browser": "PASS",
         "human_visual_screenshot_review": "NOT_TESTED",
-        "ci_run": "43225589017"
+        "ci_run": "43225589017",
+        "reviewer_run_id": "QAD-20261112-INLINE-SITE0001"
+      },
+      "deployment_proof": {
+        "commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "release_commit": "115e7d17492743f44b414e7ed7cee2aea66f02b1",
+        "github_pages_workflow": "43227068333",
+        "github_pages_result": "success",
+        "site_quality_workflow": "43227068847",
+        "site_quality_result": "success",
+        "site_url": "https://dmitriydizdar2020-cyber.github.io/servicestack-guide/",
+        "checked_on": "2026-11-12",
+        "external_spend_usd": 0
       }
     },
     {
@@ -201,12 +234,12 @@
     {
       "id": "ART-0003",
       "title": "Independent review of landscaping CRM buyer's guide and local tools",
-      "status": "qa_passed",
+      "status": "published",
       "priority": "P1",
       "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "interactive-20261112-bec77025",
-      "next_owner": "OPS-01",
+      "next_owner": "ANA-01",
       "depends_on": [],
       "attempts": 0,
       "max_attempts": 2,
@@ -217,15 +250,14 @@
         "orchestrator/reports/EDITORIAL_QA_REQUEST_2026-11-12.md"
       ],
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "OPS-01",
-        "status": "qa_passed",
+        "from_role": "OPS-01",
+        "to_role": "ANA-01",
+        "status": "published",
         "artifact_path": "articles/landscaping-crm-guide.html",
-        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
-        "real_run_id": "QAD-20261112-INLINE-ART0003",
-        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0003.md",
-        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
-        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "source_commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "real_run_id": "OPS-20261112-GSC-RELEASE",
+        "summary": "Live GitHub Pages deployment and 24 Chromium cases SUCCESS; noindex removed only after independently recorded QAD PASS; canonical sitemap contains released page",
+        "tests": "GITHUB_PAGES_SUCCESS; BROWSER_24_PASS; SITEMAP_PASS; GSC_REALTIME_INDEXING_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
@@ -238,18 +270,30 @@
         "responsive_browser": "PASS_390_768_1280_1440",
         "interactive_browser": "PASS",
         "human_visual_screenshot_review": "NOT_TESTED",
-        "ci_run": "43225589017"
+        "ci_run": "43225589017",
+        "reviewer_run_id": "QAD-20261112-INLINE-ART0003"
+      },
+      "deployment_proof": {
+        "commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "release_commit": "115e7d17492743f44b414e7ed7cee2aea66f02b1",
+        "github_pages_workflow": "43227068333",
+        "github_pages_result": "success",
+        "site_quality_workflow": "43227068847",
+        "site_quality_result": "success",
+        "site_url": "https://dmitriydizdar2020-cyber.github.io/servicestack-guide/",
+        "checked_on": "2026-11-12",
+        "external_spend_usd": 0
       }
     },
     {
       "id": "ART-0004",
       "title": "Independent review of estimate follow-up templates and browser-only builder",
-      "status": "qa_passed",
+      "status": "published",
       "priority": "P1",
       "owner": "OPS-01",
       "producer_role": "EDT-01",
       "producer_run_id": "interactive-20261112-bec77025",
-      "next_owner": "OPS-01",
+      "next_owner": "ANA-01",
       "depends_on": [],
       "attempts": 0,
       "max_attempts": 2,
@@ -260,15 +304,14 @@
         "orchestrator/reports/EDITORIAL_QA_REQUEST_2026-11-12.md"
       ],
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "OPS-01",
-        "status": "qa_passed",
+        "from_role": "OPS-01",
+        "to_role": "ANA-01",
+        "status": "published",
         "artifact_path": "articles/landscaping-estimate-follow-up-templates.html",
-        "source_commit": "d3ca33e1698f4b7299aaf8bb6d48b1bc599f00c6",
-        "real_run_id": "QAD-20261112-INLINE-ART0004",
-        "evidence": "orchestrator/reviews/QAD-20261112-INLINE-ART0004.md",
-        "summary": "Primary vendor sources, honest editorial claims, privacy/disclosure, 24-case Chromium responsive and interactive smoke tested; automated 390/1280 screenshots saved but not manually reviewed. OPS may remove noindex only for approved pages and then regenerate sitemap.",
-        "tests": "SOURCE_PASS; CHROMIUM_PASS; STATIC_PASS; SUBJECTIVE_VISUAL_NOT_TESTED; LIVE_GSC_NOT_TESTED",
+        "source_commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "real_run_id": "OPS-20261112-GSC-RELEASE",
+        "summary": "Live GitHub Pages deployment and 24 Chromium cases SUCCESS; noindex removed only after independently recorded QAD PASS; canonical sitemap contains released page",
+        "tests": "GITHUB_PAGES_SUCCESS; BROWSER_24_PASS; SITEMAP_PASS; GSC_REALTIME_INDEXING_NOT_TESTED",
         "external_spend_usd": 0
       },
       "qa": {
@@ -281,7 +324,19 @@
         "responsive_browser": "PASS_390_768_1280_1440",
         "interactive_browser": "PASS",
         "human_visual_screenshot_review": "NOT_TESTED",
-        "ci_run": "43225589017"
+        "ci_run": "43225589017",
+        "reviewer_run_id": "QAD-20261112-INLINE-ART0004"
+      },
+      "deployment_proof": {
+        "commit": "cd9a35ff39b7c1dd66c955cdc7e5b12aa6d868c1",
+        "release_commit": "115e7d17492743f44b414e7ed7cee2aea66f02b1",
+        "github_pages_workflow": "43227068333",
+        "github_pages_result": "success",
+        "site_quality_workflow": "43227068847",
+        "site_quality_result": "success",
+        "site_url": "https://dmitriydizdar2020-cyber.github.io/servicestack-guide/",
+        "checked_on": "2026-11-12",
+        "external_spend_usd": 0
       }
     }
   ]
