@@ -74,7 +74,7 @@ def main():
                     try:
                         response = page.goto(base + path, wait_until='load', timeout=15000)
                         assert response and response.status == 200
-                        page.evaluate('document.fonts.ready')
+                        page.evaluate('async () => { await document.fonts.ready; await Promise.all(Array.from(document.images, async img => { img.loading = "eager"; try { await img.decode(); } catch (e) {} })); }')
                         page.wait_for_timeout(75)
                         scroll = page.evaluate('Math.max(document.documentElement.scrollWidth, document.body.scrollWidth)')
                         assert scroll <= width + 2, f'horizontal overflow {scroll}px at {width}px'

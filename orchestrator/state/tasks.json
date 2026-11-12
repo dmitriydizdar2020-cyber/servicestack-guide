@@ -11,39 +11,47 @@
     {
       "id": "ART-0001",
       "title": "Verify landscaping website builder buyer guide",
-      "status": "rework",
+      "status": "awaiting_qa",
       "priority": "P0",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "producer_role": "EDT-01",
-      "producer_run_id": "editorial-20261111-builder",
-      "next_owner": "QAD-01",
+      "producer_run_id": "editorial-20261112-2d957",
+      "next_owner": "OPS-01",
       "depends_on": [],
       "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/website-builder-landscaping-business.html",
       "evidence": [
-        "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225"
+        "commit:e6fbe98c90770d3b5f235c026d1060b612d4b225",
+        "commit:2d957e9cdf48c0d5dc239a176a00dcb2cdc6ae8c"
       ],
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "EDT-01",
-        "status": "rework",
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
         "artifact_path": "articles/website-builder-landscaping-business.html",
-        "source_commit": "efdcdb101a5465ab5d9e772adca271b48ee73356",
-        "summary": "Replace Hostinger affiliate landing page with primary product/feature documentation; provide responsive and calculator test evidence; preserve noindex.",
-        "real_run_id": "QAD-20261112-1435-ART0001",
+        "source_commit": "2d957e9cdf48c0d5dc239a176a00dcb2cdc6ae8c",
+        "real_run_id": "editorial-20261112-2d957",
+        "summary": "Replaced Hostinger affiliate landing page with official website-builder contact-form documentation and plan/renewal source; dated primary-source evidence now present; independent QA and real responsive run still required",
+        "tests": "Hostinger official source checked in public web search; first Chromium smoke caught lazy-image test race to be corrected; independent visual/factual PASS not yet granted",
         "external_spend_usd": 0
       },
       "qa": {
-        "decision": "REWORK",
-        "evidence": "orchestrator/reviews/QAD-20261112-1435-ART0001.md",
-        "real_run_id": "QAD-20261112-1435-ART0001",
-        "date": "2026-11-12",
-        "source_check": "FAIL",
-        "visual_mobile": "NOT TESTED",
-        "interactive": "NOT TESTED"
-      }
+        "decision": null,
+        "evidence": null
+      },
+      "qa_history": [
+        {
+          "decision": "REWORK",
+          "evidence": "orchestrator/reviews/QAD-20261112-1435-ART0001.md",
+          "real_run_id": "QAD-20261112-1435-ART0001",
+          "date": "2026-11-12",
+          "source_check": "FAIL",
+          "visual_mobile": "NOT TESTED",
+          "interactive": "NOT TESTED"
+        }
+      ]
     },
     {
       "id": "ART-0002",
