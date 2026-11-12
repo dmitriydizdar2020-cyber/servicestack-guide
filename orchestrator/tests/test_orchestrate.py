@@ -1,5 +1,3 @@
-import copy
-import json
 import pathlib
 import sys
 import tempfile
@@ -10,7 +8,27 @@ import orchestrate as o
 
 class TestOrchestrator(unittest.TestCase):
     def setUp(self):
-        self.data=copy.deepcopy(o.load_state())
+        self.data = {
+            'schema_version': '1.0',
+            'external_spend_ceiling_usd': 0,
+            'tasks': [
+                {
+                    'id': 'QA-001',
+                    'title': 'Guide ready for review',
+                    'priority': 'P0',
+                    'status': 'awaiting_qa',
+                    'owner': 'QAD-01',
+                    'artifact_path': 'articles/guide.html',
+                },
+                {
+                    'id': 'ANA-001',
+                    'title': 'Completed research report',
+                    'priority': 'P1',
+                    'status': 'completed',
+                    'owner': 'ANA-01',
+                },
+            ],
+        }
     def draft_task(self):
         self.data['tasks'].append({
             'id':'DRAFT-999', 'title':'Fixture', 'priority':'P1','status':'ready',
@@ -18,10 +36,10 @@ class TestOrchestrator(unittest.TestCase):
             'spend_usd':0,'qa':{'decision':None,'evidence':None}
         })
         return self.data['tasks'][-1]
-    def test_bootstrap_and_readiness(self):
+    def test_next_task_routes_only_eligible_work(self):
         self.assertEqual([],o.validate(self.data))
-        self.assertEqual('ART-0001',o.next_task(self.data,'QAD-01')['id'])
-        self.assertNotEqual('ANA-0001',(o.next_task(self.data,'ANA-01') or {}).get('id'))
+        self.assertEqual('QA-001',o.next_task(self.data,'QAD-01')['id'])
+        self.assertIsNone(o.next_task(self.data,'ANA-01'))
         self.assertIsNone(o.next_task(self.data,'OPS-01'))
     def test_role_owner_claim_handoff_qa_pass(self):
         t=self.draft_task()
@@ -81,13 +99,13 @@ class TestOrchestrator(unittest.TestCase):
         self.data['tasks'][0]['spend_usd']=1
         self.assertTrue(any(x['code']=='SPEND' for x in o.validate(self.data)))
         self.data['tasks'][0]['spend_usd']=0
-        t=self.draft_task();t['depends_on']=['ART-0001']
+        t=self.draft_task();t['depends_on']=['QA-001']
         self.data['tasks'][0]['depends_on']=['DRAFT-999']
         self.assertTrue(any(x['code']=='DEPENDENCY_CYCLE' for x in o.validate(self.data)))
         t['owner']='NOT-A-ROLE'
         self.assertTrue(any(x['code']=='OWNER' for x in o.validate(self.data)))
     def test_unfinished_dependency_cannot_be_claimed(self):
-        t=self.draft_task();t['depends_on']=['ART-0001']
+        t=self.draft_task();t['depends_on']=['QA-001']
         with self.assertRaises(o.OrchestrationError):o.claim(self.data,t['id'],'EDT-01','prod')
     def test_idempotent_claim_same_run(self):
         t=self.draft_task()
