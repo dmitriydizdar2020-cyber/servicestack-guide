@@ -22,18 +22,21 @@ jobs:
     timeout-minutes: 7
     steps:
       - name: Checkout owner repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # observed GitHub-resolved checkout v4 commit
         with:
           persist-credentials: false
       - name: Show Python version
         run: python3 --version
+      - name: Validate versioned employee skill packs
+        run: python3 orchestrator/skills/skill_audit.py
       - name: Test task coordination and QA safety
         run: python3 -m unittest discover -s orchestrator/tests -p 'test_*.py' -v
       - name: Generate verified task checkup
+        if: always()
         run: python3 orchestrator/orchestrate.py checkup --out orchestrator-checkup.json
       - name: Preserve audit report as Actions artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # observed GitHub-resolved upload-artifact v4 commit
         with:
           name: affiliate-orchestrator-checkup
           path: orchestrator-checkup.json

@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-11-12",
+  "scope": "Internal role knowledge packs, not native ChatGPT plugin skills, and do not create worker processes",
+  "policy": "Each role has one versioned candidate SKILL.md. Independent QAD-01 five-case evaluation is mandatory before manifest promotion to approved. Future roles scaffold as DRAFT and require owner/CEO role activation process.",
+  "skills": [
+    {
+      "role_id": "CEO-01",
+      "path": "skills/CEO-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "ORC-01",
+      "path": "skills/ORC-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "SID-00",
+      "path": "skills/SID-00/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "EDT-01",
+      "path": "skills/EDT-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "OPS-01",
+      "path": "skills/OPS-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "QAD-01",
+      "path": "skills/QAD-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "COM-01",
+      "path": "skills/COM-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "ANA-01",
+      "path": "skills/ANA-01/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    },
+    {
+      "role_id": "AES-00",
+      "path": "skills/AES-00/SKILL.md",
+      "status": "candidate",
+      "version": "1.0.0",
+      "approved_by": null,
+      "approval_evidence": null,
+      "evaluation_cases_passed": 0
+    }
+  ]
+}
