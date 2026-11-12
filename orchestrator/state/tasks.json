@@ -371,8 +371,8 @@
         "status": "awaiting_qa",
         "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
         "real_run_id": "EDT-20261112-ART0005-VISUAL-REVISION",
-        "summary": "Fixed owner-flagged issue: editorial hero photograph, three informative in-article images including comparison diagram; natural product CTAs without parenthetic 'affiliate link'; clear top affiliate disclosure and sponsored rel preserved; responsive CSS and browser QA regression checks.",
-        "tests": "BROWSER_CI_PENDING; INDEPENDENT_QA_PENDING; USER_VISUAL_REVIEW_PENDING",
+        "summary": "Fixed owner-flagged issue: editorial hero photograph, three informative in-article images including comparison diagram; natural product CTAs without parenthetic 'affiliate link'; clear top affiliate disclosure and sponsored rel preserved; responsive CSS and browser QA regression checks. Verified desktop/mobile screenshots revealed CSS specificity bug overriding CTA text with red; fixed via more-specific white contrast rule.",
+        "tests": "STATIC_PENDING; CHROMIUM_PENDING; HUMAN_VISUAL_PREVIEWED_DESKTOP_MOBILE; INDEPENDENT_QA_PENDING",
         "external_spend_usd": 0
       }
     }

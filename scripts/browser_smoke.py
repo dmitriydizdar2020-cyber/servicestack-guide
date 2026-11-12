@@ -67,6 +67,9 @@ def check_tool(page, path):
         labels = [label.strip().lower() for label in paid_links.all_inner_texts()]
         assert all('affiliate link' not in label and 'referral' not in label for label in labels), f'Unnatural CTA labels: {labels}'
         assert 'commission' in page.locator('.editorial-disclosure').inner_text().lower(), 'Paid relationship not disclosed'
+        button_color = paid_links.first.evaluate('(el) => getComputedStyle(el).color')
+        assert button_color == 'rgb(255, 255, 255)', f'Affiliate CTA text must contrast with dark background: {button_color}'
+
         assert page.locator('meta[name="robots"]').get_attribute('content') == 'noindex,nofollow', 'QA staging page must remain noindex'
 
 def main():
