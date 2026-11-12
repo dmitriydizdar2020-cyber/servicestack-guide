@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-12T06:20:00Z",
+  "updated_at": "2026-11-12",
   "site": "dmitriydizdar2020-cyber/servicestack-guide",
   "mission": "$100k+/month long-term; validated lawful business models, measured cash, owner autonomy and zero external spend",
   "external_spend_ceiling_usd": 0,
@@ -142,6 +142,72 @@
         "summary": "Indexation and measurement checklist prepared; no page unblocked. Three P0 pages await independent QA. GSC property, traffic, commissions and payout remain UNKNOWN; no paid spend.",
         "tests": "GitHub Actions success; GSC, mobile and merchant metrics NOT TESTED",
         "real_run_id": "production-20261112-0820"
+      }
+    },
+    {
+      "id": "ART-0003",
+      "title": "Independent review of landscaping CRM buyer's guide and local tools",
+      "status": "awaiting_qa",
+      "priority": "P1",
+      "owner": "QAD-01",
+      "producer_role": "EDT-01",
+      "producer_run_id": "interactive-20261112-bec77025",
+      "next_owner": "OPS-01",
+      "depends_on": [],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/landscaping-crm-guide.html",
+      "evidence": [
+        "commit:bec77025a059f8184c8c7a157d17be02ad58eb63",
+        "orchestrator/reports/EDITORIAL_QA_REQUEST_2026-11-12.md"
+      ],
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "source_commit": "bec77025a059f8184c8c7a157d17be02ad58eb63",
+        "artifact_path": "articles/landscaping-crm-guide.html",
+        "summary": "Draft prepared with source-backed HubSpot and Pipedrive comparison; local calculator and pipeline generator tested at 390px without final CSS; full responsive and factual QA pending.",
+        "tests": "Node JS syntax PASS; local Chrome functional interaction PASS; final production CSS responsive NOT TESTED; official source content to review independently",
+        "real_run_id": "interactive-20261112-bec77025",
+        "external_spend_usd": 0
+      },
+      "qa": {
+        "decision": null,
+        "evidence": null
+      }
+    },
+    {
+      "id": "ART-0004",
+      "title": "Independent review of estimate follow-up templates and browser-only builder",
+      "status": "awaiting_qa",
+      "priority": "P1",
+      "owner": "QAD-01",
+      "producer_role": "EDT-01",
+      "producer_run_id": "interactive-20261112-bec77025",
+      "next_owner": "OPS-01",
+      "depends_on": [],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/landscaping-estimate-follow-up-templates.html",
+      "evidence": [
+        "commit:bec77025a059f8184c8c7a157d17be02ad58eb63",
+        "orchestrator/reports/EDITORIAL_QA_REQUEST_2026-11-12.md"
+      ],
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "source_commit": "bec77025a059f8184c8c7a157d17be02ad58eb63",
+        "artifact_path": "articles/landscaping-estimate-follow-up-templates.html",
+        "summary": "Six original templates and no-network message generator prepared; local JS tested at 390px; full final CSS, visual, privacy and factual QA pending.",
+        "tests": "Node JS syntax PASS; local Chrome functional interaction PASS; final production CSS responsive NOT TESTED; official source content to review independently",
+        "real_run_id": "interactive-20261112-bec77025",
+        "external_spend_usd": 0
+      },
+      "qa": {
+        "decision": null,
+        "evidence": null
       }
     }
   ]
