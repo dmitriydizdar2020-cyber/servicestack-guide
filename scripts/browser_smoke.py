@@ -15,7 +15,8 @@ PAGES = ['index.html', 'about.html',
  'articles/website-builder-landscaping-business.html',
  'articles/landscaping-quote-request-form.html',
  'articles/landscaping-crm-guide.html',
- 'articles/landscaping-estimate-follow-up-templates.html']
+ 'articles/landscaping-estimate-follow-up-templates.html',
+ 'articles/site123-vs-systeme-io-service-business.html']
 VIEWPORTS = (390, 768, 1280, 1440)
 
 class Handler(SimpleHTTPRequestHandler):

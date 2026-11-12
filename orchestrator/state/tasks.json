@@ -338,6 +338,43 @@
         "checked_on": "2026-11-12",
         "external_spend_usd": 0
       }
+    },
+    {
+      "id": "ART-0005",
+      "title": "Independently QA new SITE123 vs Systeme.io service business buying guide (disclosed affiliate links)",
+      "status": "awaiting_qa",
+      "priority": "P0",
+      "owner": "QAD-01",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261112-SITE123-SYSTEME",
+      "next_owner": "OPS-01",
+      "depends_on": [
+        "SITE-0001",
+        "ART-0001"
+      ],
+      "attempts": 0,
+      "max_attempts": 2,
+      "spend_usd": 0,
+      "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
+      "evidence": [
+        "SITE123 official features, custom form docs, terms checked 2026-11-12",
+        "systeme.io official pricing and affiliate docs checked 2026-11-12",
+        "original vector illustration assets/site-versus-funnel-editorial.svg"
+      ],
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
+        "real_run_id": "EDT-20261112-SITE123-SYSTEME",
+        "summary": "New buyer guide, contextual affiliate disclosure, two owner-supplied tracked URLs; intentionally noindex pending independent editorial and browser QA; does not modify live indexed pages or sitemap.",
+        "tests": "SOURCE_DOCUMENTED; LOCAL_HTML_NOT_TESTED; BROWSER_CI_QUEUED; INDEPENDENT_QA_NOT_TESTED",
+        "external_spend_usd": 0
+      }
     }
   ]
 }

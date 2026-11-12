@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" role="img" aria-labelledby="title desc">
+<title id="title">A service website and lead funnel</title>
+<desc id="desc">Original abstract editorial diagram contrasting a multi-page service website and a focused lead funnel using simple modular shapes</desc>
+<rect width="1600" height="760" fill="#e6e8e1"/>
+<rect x="50" y="50" width="1500" height="660" fill="#fdfcf9" stroke="#c8c9c2" stroke-width="3"/>
+<path d="M800 72v615" stroke="#d7d8d1" stroke-width="2"/>
+<text x="120" y="132" font-size="31" fill="#9e302f" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="3">01 / BUSINESS WEBSITE</text>
+<text x="870" y="132" font-size="31" fill="#9e302f" font-family="Arial,sans-serif" font-weight="bold" letter-spacing="3">02 / LEAD FUNNEL</text>
+<rect x="118" y="180" width="607" height="380" fill="white" stroke="#222a28" stroke-width="4" rx="3"/>
+<rect x="118" y="180" width="607" height="47" fill="#1c2724"/>
+<circle cx="148" cy="203" r="7" fill="#e0b3a9"/><circle cx="172" cy="203" r="7" fill="#d5dacf"/><circle cx="196" cy="203" r="7" fill="#d5dacf"/>
+<rect x="145" y="260" width="290" height="180" fill="#cdd3c9"/>
+<path d="M180 413L245 326 310 378 360 303 407 413Z" fill="#778d77"/>
+<rect x="471" y="270" width="218" height="19" fill="#343e3a"/><rect x="471" y="304" width="184" height="8" fill="#b7bbb5"/>
+<rect x="471" y="323" width="196" height="8" fill="#b7bbb5"/><rect x="471" y="342" width="161" height="8" fill="#b7bbb5"/>
+<rect x="471" y="384" width="142" height="38" fill="#9e302f"/>
+<rect x="145" y="473" width="165" height="60" fill="#e3e6df"/><rect x="326" y="473" width="165" height="60" fill="#e3e6df"/><rect x="507" y="473" width="181" height="60" fill="#e3e6df"/>
+<text x="140" y="612" font-size="25" fill="#313936" font-family="Georgia,serif">Services · Work · Area · Contact</text>
+<rect x="865" y="180" width="627" height="380" fill="white" stroke="#222a28" stroke-width="4"/>
+<rect x="865" y="180" width="627" height="47" fill="#1c2724"/>
+<circle cx="895" cy="203" r="7" fill="#e0b3a9"/><circle cx="919" cy="203" r="7" fill="#d5dacf"/><circle cx="943" cy="203" r="7" fill="#d5dacf"/>
+<text x="975" y="289" font-size="30" font-family="Georgia,serif" fill="#212824" font-weight="bold">One clear next step</text>
+<rect x="975" y="326" width="376" height="13" fill="#a5afa5"/><rect x="975" y="355" width="318" height="13" fill="#c4cbc2"/>
+<rect x="975" y="403" width="364" height="47" fill="#eef0ea" stroke="#b1bab0"/><rect x="975" y="465" width="364" height="47" fill="#9e302f"/>
+<path d="M1243 586v51" fill="none" stroke="#778d77" stroke-width="5" stroke-dasharray="7 8"/>
+<path d="M1230 625l13 15 13-15" fill="none" stroke="#778d77" stroke-width="5"/>
+<text x="976" y="681" font-size="25" fill="#313936" font-family="Georgia,serif">Offer · Form · Follow-up</text>
+</svg>
