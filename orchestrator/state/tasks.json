@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-13T13:56:00+02:00",
+  "updated_at": "2026-11-13T14:33:23+02:00",
   "site": "dmitriydizdar2020-cyber/servicestack-guide",
   "mission": "$100k+/month long-term; validated lawful business models, measured cash, owner autonomy and zero external spend",
   "external_spend_ceiling_usd": 0,
@@ -432,13 +432,13 @@
     {
       "id": "ART-0007",
       "title": "Quote form or booking calendar for home-service contractors?",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 1,
+      "attempts": 2,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
@@ -454,36 +454,35 @@
       "qa": {
         "decision": "REWORK",
         "reviewer_role": "QAD-01",
-        "reviewer_run_id": "QAD-20261113-1334-BATCH2",
-        "reviewed_blob_sha": "d9d94651442d2e2060df12f5199d0d2d9b7bcefb",
-        "evidence": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0007.md",
-        "reviewed_at": "2026-11-13T13:34:00+02:00",
-        "reason": "Evidence relevance defect: Google LocalBusiness structured-data documentation is listed as a principal source but does not substantiate quote-form vs calendar scheduling or time-zone/availability recommendations; source list lacks a primary booking-calendar provider reference. Original comparison is practical but vendor-specific booking assertions are not independently documented. Mobile/desktop visuals NOT TESTED.",
-        "note": "Previous QAD decision applies to old blob only; new blob awaiting independent review."
+        "reviewer_run_id": "QAD-20261113-1433-BATCH3",
+        "reviewed_blob_sha": "10b66b3911fd797306d1a433e5069adf0e8dc971",
+        "evidence": "orchestrator/reviews/QAD-20261113-1433-BATCH3-ART-0007.md",
+        "reviewed_at": "2026-11-13T14:33:23+02:00",
+        "reason": "Source relevance correction verified: Google Calendar official appointment schedule documentation does support buffer time, booking form, availability and conflict checks. However independent mobile 390px / desktop 1280px visual inspection and real navigation/link verification remain NOT TESTED. No independent screenshot evidence; cannot approve release under the site's required visual gate."
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
-        "real_run_id": "EDT-20261113-1356-ART0007-SOURCE-REWORK",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1433-BATCH3",
         "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
-        "source_commit": "ad92ffe31bce23694eecaae4e5d93ff2e35adfb3",
-        "source_blob_sha": "10b66b3911fd797306d1a433e5069adf0e8dc971",
-        "summary": "Replaced unrelated structured-data citation with official Google Calendar booking documentation; clarified buffers, calendar conflict checks and plan eligibility. Independent QA re-review required.",
-        "tests": "SOURCE_RELEVANCE_REMEDIATED; CHROMIUM_390_768_1280_1440_NOT_TESTED; SCREENSHOTS_NOT_TESTED; LIVE_LINKS_NOT_TESTED",
+        "reviewed_blob_sha": "10b66b3911fd797306d1a433e5069adf0e8dc971",
+        "review_path": "orchestrator/reviews/QAD-20261113-1433-BATCH3-ART-0007.md",
+        "summary": "Supply actual 390px and 1280px browser captures reviewed independently, verify anchor navigation and Google/SITE123 outbound links; preserve noindex until fresh QAD review. Source fix itself passes.",
+        "tests": "PRIMARY_SOURCE_CHECK_DONE; HTML_STATIC_CHECK_DONE; 390_SCREENSHOT_NOT_TESTED; 1280_SCREENSHOT_NOT_TESTED; LIVE_BROWSER_NOT_TESTED",
         "external_spend_usd": 0
       }
     },
     {
       "id": "ART-0008",
       "title": "How to photograph landscaping projects for a trustworthy website",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/landscaping-project-photography-guide.html",
@@ -497,30 +496,37 @@
       "producer_run_id": "EDT-20261113-BATCH5",
       "next_owner": "OPS-01",
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1433-BATCH3",
+        "reviewed_blob_sha": "c60fc2d771859f741b86f4a9e9cbc6a4a1299440",
+        "evidence": "orchestrator/reviews/QAD-20261113-1433-BATCH3-ART-0008.md",
+        "reviewed_at": "2026-11-13T14:33:23+02:00",
+        "reason": "Core original four-frame photography routine and consent/caption guidance are useful; Google Business Profile photo requirements official source supports real, well-lit, unaltered photos. Article illustrates portfolio-photo authenticity using synthetic landscaping imagery, explicitly labeled; still lacks a concrete real-photo shot-sequence example, and 390/1280 independent visual review NOT TESTED. Rights of original assets are asserted, not independently established."
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1433-BATCH3",
         "artifact_path": "articles/landscaping-project-photography-guide.html",
-        "real_run_id": "EDT-20261113-BATCH5",
-        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
-        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "reviewed_blob_sha": "c60fc2d771859f741b86f4a9e9cbc6a4a1299440",
+        "review_path": "orchestrator/reviews/QAD-20261113-1433-BATCH3-ART-0008.md",
+        "summary": "Add a truthful non-client four-shot sample sequence with specific accessible caption/alt examples (may be text-only), cite applicable official photo guidance specifically, supply provenance record for local editorial images and independently inspect 390/1280 browser screenshots; retain AI labels.",
+        "tests": "PRIMARY_SOURCE_CHECK_DONE; HTML_STATIC_CHECK_DONE; 390_SCREENSHOT_NOT_TESTED; 1280_SCREENSHOT_NOT_TESTED; LIVE_BROWSER_NOT_TESTED",
         "external_spend_usd": 0
       }
     },
     {
       "id": "ART-0009",
       "title": "SITE123 launch checklist for a local service business",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/site123-local-service-launch-checklist.html",
@@ -534,17 +540,24 @@
       "producer_run_id": "EDT-20261113-BATCH5",
       "next_owner": "OPS-01",
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1433-BATCH3",
+        "reviewed_blob_sha": "f0ff4f1841d4649290477720fa89e35e89fa764d",
+        "evidence": "orchestrator/reviews/QAD-20261113-1433-BATCH3-ART-0009.md",
+        "reviewed_at": "2026-11-13T14:33:23+02:00",
+        "reason": "SITE123 official domain support confirms custom-domain setup needs a Premium package; article carefully cautions plan-dependent features. But its source list cites Google LocalBusiness structured-data guidance for sitemap, canonical and URL Inspection claims; that page does not directly substantiate those distinct topics. No independent 390/1280 visual inspection or outbound link navigation test."
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1433-BATCH3",
         "artifact_path": "articles/site123-local-service-launch-checklist.html",
-        "real_run_id": "EDT-20261113-BATCH5",
-        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
-        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "reviewed_blob_sha": "f0ff4f1841d4649290477720fa89e35e89fa764d",
+        "review_path": "orchestrator/reviews/QAD-20261113-1433-BATCH3-ART-0009.md",
+        "summary": "Replace/add Google's canonicalization, sitemap and Search Console URL Inspection primary docs for their respective claims; retain LocalBusiness docs only for directly relevant structured-data claims. Add actual 390px and 1280px visual checks and outbound link checks; retain noindex.",
+        "tests": "PRIMARY_SOURCE_CHECK_DONE; HTML_STATIC_CHECK_DONE; 390_SCREENSHOT_NOT_TESTED; 1280_SCREENSHOT_NOT_TESTED; LIVE_BROWSER_NOT_TESTED",
         "external_spend_usd": 0
       }
     },
