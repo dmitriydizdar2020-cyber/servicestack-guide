@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-13",
+  "updated_at": "2026-11-13T13:56:00+02:00",
   "site": "dmitriydizdar2020-cyber/servicestack-guide",
   "mission": "$100k+/month long-term; validated lawful business models, measured cash, owner autonomy and zero external spend",
   "external_spend_ceiling_usd": 0,
@@ -432,9 +432,9 @@
     {
       "id": "ART-0007",
       "title": "Quote form or booking calendar for home-service contractors?",
-      "status": "rework",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -449,7 +449,7 @@
       "editorial_brief": "estimate workflow vs appointment scheduling, data minimization, vendor limitations; SITE123/Systeme.io only when relevant",
       "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
       "producer_role": "EDT-01",
-      "producer_run_id": "EDT-20261113-BATCH5",
+      "producer_run_id": "EDT-20261113-1356-ART0007-SOURCE-REWORK",
       "next_owner": "QAD-01",
       "qa": {
         "decision": "REWORK",
@@ -458,18 +458,19 @@
         "reviewed_blob_sha": "d9d94651442d2e2060df12f5199d0d2d9b7bcefb",
         "evidence": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0007.md",
         "reviewed_at": "2026-11-13T13:34:00+02:00",
-        "reason": "Evidence relevance defect: Google LocalBusiness structured-data documentation is listed as a principal source but does not substantiate quote-form vs calendar scheduling or time-zone/availability recommendations; source list lacks a primary booking-calendar provider reference. Original comparison is practical but vendor-specific booking assertions are not independently documented. Mobile/desktop visuals NOT TESTED."
+        "reason": "Evidence relevance defect: Google LocalBusiness structured-data documentation is listed as a principal source but does not substantiate quote-form vs calendar scheduling or time-zone/availability recommendations; source list lacks a primary booking-calendar provider reference. Original comparison is practical but vendor-specific booking assertions are not independently documented. Mobile/desktop visuals NOT TESTED.",
+        "note": "Previous QAD decision applies to old blob only; new blob awaiting independent review."
       },
       "handoff": {
-        "from_role": "QAD-01",
-        "to_role": "EDT-01",
-        "status": "rework",
-        "real_run_id": "QAD-20261113-1334-BATCH2",
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "real_run_id": "EDT-20261113-1356-ART0007-SOURCE-REWORK",
         "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
-        "summary": "Replace unrelated Google structured-data source with a dated official booking/calendar provider help document supporting the specific booking functionality; distinguish editorial workflow advice from vendor facts; independently inspect mobile 390px/desktop 1280px and links. Keep noindex.",
-        "reviewed_blob_sha": "d9d94651442d2e2060df12f5199d0d2d9b7bcefb",
-        "review_path": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0007.md",
-        "tests": "Static HTML: canonical/title/noindex, internal anchor targets, two AI-labeled images and editorial disclosure. 390px/1280px screenshots NOT TESTED; live links NOT TESTED; browser behavior NOT TESTED; source relevance FAIL.",
+        "source_commit": "ad92ffe31bce23694eecaae4e5d93ff2e35adfb3",
+        "source_blob_sha": "10b66b3911fd797306d1a433e5069adf0e8dc971",
+        "summary": "Replaced unrelated structured-data citation with official Google Calendar booking documentation; clarified buffers, calendar conflict checks and plan eligibility. Independent QA re-review required.",
+        "tests": "SOURCE_RELEVANCE_REMEDIATED; CHROMIUM_390_768_1280_1440_NOT_TESTED; SCREENSHOTS_NOT_TESTED; LIVE_LINKS_NOT_TESTED",
         "external_spend_usd": 0
       }
     },
