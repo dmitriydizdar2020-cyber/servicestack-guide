@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-13T14:33:23+02:00",
+  "updated_at": "2026-11-13T15:33:48+02:00",
   "site": "dmitriydizdar2020-cyber/servicestack-guide",
   "mission": "$100k+/month long-term; validated lawful business models, measured cash, owner autonomy and zero external spend",
   "external_spend_ceiling_usd": 0,
@@ -564,13 +564,13 @@
     {
       "id": "ART-0010",
       "title": "Systeme.io free-plan setup for a service-business lead funnel",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/systeme-io-free-lead-funnel-guide.html",
@@ -584,30 +584,35 @@
       "producer_run_id": "EDT-20261113-BATCH5",
       "next_owner": "OPS-01",
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1533-ART0010-0011",
+        "evidence": "orchestrator/reviews/QAD-20261113-1533-ART-0010.md",
+        "reviewed_blob_sha": "33f266acebb8d6c242fefff564e080056acf3826",
+        "reviewed_branch_sha": "c779b2c98e058a74581fdd6bb3b380ff12786614",
+        "reviewed_at": "2026-11-13T15:33:48+02:00"
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1533-ART0010-0011",
         "artifact_path": "articles/systeme-io-free-lead-funnel-guide.html",
-        "real_run_id": "EDT-20261113-BATCH5",
-        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
-        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "summary": "Add vendor-documented actionable funnel setup and independent browser evidence",
+        "tests": "OFFICIAL_PRIMARY_SOURCE_FACTS_CHECKED; INDEPENDENT_BROWSER_390_1280_NOT_TESTED; NOINDEX_RETAINED",
         "external_spend_usd": 0
       }
     },
     {
       "id": "ART-0011",
       "title": "Google Business Profile for landscaping companies: service areas and verification",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/google-business-profile-landscapers.html",
@@ -621,17 +626,22 @@
       "producer_run_id": "EDT-20261113-BATCH5",
       "next_owner": "OPS-01",
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1533-ART0010-0011",
+        "evidence": "orchestrator/reviews/QAD-20261113-1533-ART-0011.md",
+        "reviewed_blob_sha": "abc1f1f8e4528aaf084908b66edae8adaaa66922",
+        "reviewed_branch_sha": "c779b2c98e058a74581fdd6bb3b380ff12786614",
+        "reviewed_at": "2026-11-13T15:33:48+02:00"
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1533-ART0010-0011",
         "artifact_path": "articles/google-business-profile-landscapers.html",
-        "real_run_id": "EDT-20261113-BATCH5",
-        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
-        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "summary": "Add actual Google Business Profile service-area edit steps and independent browser evidence",
+        "tests": "OFFICIAL_PRIMARY_SOURCE_FACTS_CHECKED; INDEPENDENT_BROWSER_390_1280_NOT_TESTED; NOINDEX_RETAINED",
         "external_spend_usd": 0
       }
     },
