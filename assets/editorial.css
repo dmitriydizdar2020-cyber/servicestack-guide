@@ -116,3 +116,18 @@ a{color:inherit;text-decoration:none}a:hover{color:var(--accent)}button,input,te
     color:#9e302f;margin:0 0 6px
   }
 }
+
+/* ART-0006: homepage brief builder; canonical shared stylesheet */
+.homepage-brief{background:#f8f4ee;border:1px solid #d8d0c5;padding:clamp(1rem,3vw,2rem);margin:1.5rem 0 2rem;border-radius:4px}
+.homepage-brief .brief-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.homepage-brief label{display:block;font-weight:700;color:#292928;font-size:.92rem;margin-bottom:.35rem}
+.homepage-brief input,.homepage-brief textarea{box-sizing:border-box;width:100%;max-width:100%;border:1px solid #a9a29a;background:#fff;color:#202020;padding:.8rem;border-radius:3px;font:inherit;min-height:2.7rem}
+.homepage-brief textarea{min-height:13rem;line-height:1.6;resize:vertical;margin-top:1rem}
+.homepage-brief button{background:#832e37;color:#fff;border:0;border-radius:3px;padding:.85rem 1.3rem;font:inherit;font-weight:700;cursor:pointer;margin-top:1.25rem}
+.homepage-brief button:hover{background:#6a2029}
+.homepage-brief button:focus-visible,.homepage-brief input:focus-visible,.homepage-brief textarea:focus-visible{outline:3px solid #b35b63;outline-offset:2px}
+.homepage-brief .brief-footnote{font-size:.83rem;line-height:1.5;color:#54514d}
+.homepage-example{padding:1.2rem;border-left:4px solid #943b46;background:#faf8f4;margin:1.5rem 0}
+.homepage-example h3{margin-top:0}
+@media(max-width:680px){.homepage-brief .brief-fields{grid-template-columns:1fr}.homepage-brief{padding:1rem}}
+.homepage-brief .brief-output-label{margin-top:1rem}
