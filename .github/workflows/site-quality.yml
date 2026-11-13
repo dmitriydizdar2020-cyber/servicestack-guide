@@ -26,6 +26,8 @@ jobs:
           python3 -m unittest discover -s scripts/tests -v
           python3 scripts/owner_scorecard.py --date "$(TZ=Europe/Bucharest date +%F)" > /tmp/owner-scorecard.md
           grep -q 'UNKNOWN' /tmp/owner-scorecard.md
+      - name: Guard every new article against incomplete shells
+        run: python3 scripts/article_integrity.py
       - name: Validate indexable-only sitemap
         run: python3 scripts/build_sitemap.py --check
   browser-smoke:
