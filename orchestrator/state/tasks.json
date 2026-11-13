@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-11-12",
+  "updated_at": "2026-11-13",
   "site": "dmitriydizdar2020-cyber/servicestack-guide",
   "mission": "$100k+/month long-term; validated lawful business models, measured cash, owner autonomy and zero external spend",
   "external_spend_ceiling_usd": 0,
@@ -418,9 +418,9 @@
     {
       "id": "ART-0007",
       "title": "Quote form or booking calendar for home-service contractors?",
-      "status": "ready",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -428,17 +428,36 @@
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
-      "evidence": [],
+      "evidence": [
+        "Official sources reviewed 2026-11-13: https://www.site123.com/support/cat/customizable-forms | https://developers.google.com/search/docs/appearance/structured-data/local-business"
+      ],
       "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
       "editorial_brief": "estimate workflow vs appointment scheduling, data minimization, vendor limitations; SITE123/Systeme.io only when relevant",
-      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261113-BATCH5",
+      "next_owner": "OPS-01",
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
+        "real_run_id": "EDT-20261113-BATCH5",
+        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
+        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0008",
       "title": "How to photograph landscaping projects for a trustworthy website",
-      "status": "ready",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -446,17 +465,36 @@
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/landscaping-project-photography-guide.html",
-      "evidence": [],
+      "evidence": [
+        "Official sources reviewed 2026-11-13: https://support.google.com/business/answer/6103862?hl=en | https://developers.google.com/search/docs/appearance"
+      ],
       "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
       "editorial_brief": "ethical project photography rights, mobile gallery performance, original shot checklist; no fabricated client photos",
-      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261113-BATCH5",
+      "next_owner": "OPS-01",
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/landscaping-project-photography-guide.html",
+        "real_run_id": "EDT-20261113-BATCH5",
+        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
+        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0009",
       "title": "SITE123 launch checklist for a local service business",
-      "status": "ready",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -464,17 +502,36 @@
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/site123-local-service-launch-checklist.html",
-      "evidence": [],
+      "evidence": [
+        "Official sources reviewed 2026-11-13: https://www.site123.com/support/cat/domains | https://www.site123.com/support/cat/customizable-forms | https://developers.google.com/search/docs/appearance/structured-data/local-business"
+      ],
       "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
       "editorial_brief": "free vs paid feature gates, mobile SEO, real inquiry test, published terms, contextual tracked link",
-      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261113-BATCH5",
+      "next_owner": "OPS-01",
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/site123-local-service-launch-checklist.html",
+        "real_run_id": "EDT-20261113-BATCH5",
+        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
+        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0010",
       "title": "Systeme.io free-plan setup for a service-business lead funnel",
-      "status": "ready",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -482,17 +539,36 @@
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/systeme-io-free-lead-funnel-guide.html",
-      "evidence": [],
+      "evidence": [
+        "Official sources reviewed 2026-11-13: https://help.systeme.io/article/1086 | https://help.systeme.io/article/4512-how-much-does-it-cost-to-send-1-million-emails-a-month-with-systeme-io"
+      ],
       "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
       "editorial_brief": "official free-tier limits, consent, form-to-inbox workflow, no fake live testing, contextual tracked link",
-      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261113-BATCH5",
+      "next_owner": "OPS-01",
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/systeme-io-free-lead-funnel-guide.html",
+        "real_run_id": "EDT-20261113-BATCH5",
+        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
+        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0011",
       "title": "Google Business Profile for landscaping companies: service areas and verification",
-      "status": "ready",
+      "status": "awaiting_qa",
       "priority": "P1",
-      "owner": "EDT-01",
+      "owner": "QAD-01",
       "depends_on": [
         "SITE-0001"
       ],
@@ -500,10 +576,29 @@
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/google-business-profile-landscapers.html",
-      "evidence": [],
+      "evidence": [
+        "Official sources reviewed 2026-11-13: https://support.google.com/business/answer/9157481?hl=en | https://support.google.com/business/answer/3038177 | https://support.google.com/business/answer/6103862?hl=en | https://developers.google.com/search/docs/appearance/structured-data/local-business"
+      ],
       "commercial_intent": "Service-business buyer researching websites, lead capture, CRM or customer acquisition",
       "editorial_brief": "current official Google Business Profile guidance, eligibility, real address/service areas, fake-review prohibition",
-      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend."
+      "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
+      "producer_role": "EDT-01",
+      "producer_run_id": "EDT-20261113-BATCH5",
+      "next_owner": "OPS-01",
+      "qa": {
+        "decision": null,
+        "evidence": null
+      },
+      "handoff": {
+        "from_role": "EDT-01",
+        "to_role": "QAD-01",
+        "status": "awaiting_qa",
+        "artifact_path": "articles/google-business-profile-landscapers.html",
+        "real_run_id": "EDT-20261113-BATCH5",
+        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
+        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "external_spend_usd": 0
+      }
     },
     {
       "id": "ART-0012",
