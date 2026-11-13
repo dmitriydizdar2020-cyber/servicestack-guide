@@ -3,7 +3,7 @@ Effective: 2026-11-12. Goal: reliable throughput and limited compute/context use
 
 ## First principles
 - We have **no internal OpenAI server load telemetry** and no permission to claim which hours are quieter or faster. An owner's local off-peak time is NOT evidence about global model load or available quota.
-- Do not delay release-critical, low-cost repairs or independently approved publication just to await an unverified off-peak window. Preserve the existing daily 08:00 production / 14:00 QA separation unless evidence and owner preferences justify change.
+- Do not delay release-critical, low-cost repairs or independently approved publication just to await an unverified off-peak window. Owner explicitly requested an hourly conveyor on 2026-11-13; production :00 and independent QA :30 each hour, Europe/Bucharest. See `orchestrator/pipeline/HOURLY_CONVEYOR.md`. Scheduler adherence is not guaranteed.
 - Treat response time/429 errors as *observed signals*, not proof of global traffic patterns. Log only measured run data and do not invent tokens consumed, model cost, provider demand, or latency.
 
 ## Job classes

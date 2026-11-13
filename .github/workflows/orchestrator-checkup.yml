@@ -9,7 +9,7 @@ on:
       - 'index.html'
       - 'about.html'
   schedule:
-    - cron: '17 7,14 * * *'
+    - cron: '17 * * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -36,6 +36,8 @@ jobs:
       - name: Generate role performance diagnostics (read-only, no grade fabrication)
         run: |
           python3 orchestrator/performance/agent_scorecard.py --out agent-scorecard.md --json agent-scorecard.json
+      - name: Plan next production/QA slots, check handoff and noindex safety
+        run: python3 orchestrator/pipeline/hourly_pipeline.py --check --out hourly-plan.json
       - name: Generate verified task checkup
         if: always()
         run: python3 orchestrator/orchestrate.py checkup --out orchestrator-checkup.json
@@ -46,6 +48,7 @@ jobs:
           name: affiliate-orchestrator-checkup
           path: |
             orchestrator-checkup.json
+            hourly-plan.json
             agent-scorecard.md
             agent-scorecard.json
           if-no-files-found: warn

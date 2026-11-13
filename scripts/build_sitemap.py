@@ -34,7 +34,7 @@ def main():
     approved = set()
     for task in state['tasks']:
         qa = task.get('qa', {})
-        if (task.get('status') in {'qa_passed', 'published'}
+        if (task.get('status') == 'published'
                 and qa.get('decision') == 'PASS'
                 and qa.get('reviewer_role') == 'QAD-01'
                 and qa.get('evidence')):

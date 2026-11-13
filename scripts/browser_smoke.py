@@ -11,13 +11,12 @@ import threading
 from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ['index.html', 'about.html',
- 'articles/website-builder-landscaping-business.html',
- 'articles/landscaping-quote-request-form.html',
- 'articles/landscaping-crm-guide.html',
- 'articles/landscaping-estimate-follow-up-templates.html',
- 'articles/site123-vs-systeme-io-service-business.html',
- 'articles/landscaping-homepage-guide.html']
+import json
+PAGES = ['index.html', 'about.html', *sorted(
+    p.relative_to(ROOT).as_posix() for p in (ROOT / 'articles').glob('*.html')
+)]
+STATE = json.loads((ROOT / 'orchestrator/state/tasks.json').read_text(encoding='utf-8'))
+TASKS_BY_ARTIFACT = {t.get('artifact_path'): t for t in STATE['tasks'] if t.get('artifact_path')}
 VIEWPORTS = (390, 768, 1280, 1440)
 
 class Handler(SimpleHTTPRequestHandler):
@@ -36,6 +35,20 @@ def server():
     finally:
         httpd.shutdown()
         httpd.server_close()
+
+def check_indexation_gate(page, path):
+    task = TASKS_BY_ARTIFACT.get(path)
+    if path == 'about.html':
+        task = TASKS_BY_ARTIFACT.get('index.html')
+    if not task:
+        raise AssertionError(f'No canonical task for page: {path}')
+    robot = (page.locator('meta[name="robots"]').get_attribute('content') or '').lower()
+    if task['status'] == 'published':
+        assert 'noindex' not in robot, f'{path}: published yet noindex'
+    elif task['status'] in ('awaiting_qa','qa_passed','rework','ready','blocked'):
+        assert 'noindex' in robot, f'{path}: QA-staged page publicly indexable'
+    else:
+        raise AssertionError(f'{path}: unexpected status {task["status"]}')
 
 def check_tool(page, path):
     if path.endswith('website-builder-landscaping-business.html'):
@@ -60,7 +73,6 @@ def check_tool(page, path):
         assert 'Taylor' in output and 'Example Landscape Co' in output
 
     elif path.endswith('landscaping-homepage-guide.html'):
-        assert page.locator('meta[name="robots"]').get_attribute('content') == 'noindex,nofollow', 'New article must remain QA-gated'
         page.locator('#brief-service').fill('Patios and drainage')
         page.locator('#brief-area').fill('Example Town')
         page.locator('#generate-homepage-brief').click()
@@ -92,7 +104,6 @@ def check_tool(page, path):
         button_color = paid_links.first.evaluate('(el) => getComputedStyle(el).color')
         assert button_color == 'rgb(255, 255, 255)', f'Affiliate CTA text must contrast with dark background: {button_color}'
 
-        assert page.locator('meta[name="robots"]').get_attribute('content') == 'noindex,nofollow', 'QA staging page must remain noindex'
 
 def main():
     screenshots = ROOT / 'qa_screenshots'
@@ -118,6 +129,7 @@ def main():
                         assert page.locator('h1').count() == 1, 'H1 count not one'
                         broken = page.eval_on_selector_all('img', '(xs) => xs.filter(x => !x.complete || !x.naturalWidth).map(x => x.getAttribute("src"))')
                         assert not broken, f'broken images: {broken}'
+                        check_indexation_gate(page, path)
                         check_tool(page, path)
                         assert not errors, f'uncaught JS errors: {errors}'
                         if width in (390, 1280):
