@@ -342,17 +342,17 @@
     {
       "id": "ART-0005",
       "title": "Independently QA new SITE123 vs Systeme.io service business buying guide (disclosed affiliate links)",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P0",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "producer_role": "EDT-01",
       "producer_run_id": "EDT-20261112-ART0005-VISUAL-V5",
-      "next_owner": "OPS-01",
+      "next_owner": "QAD-01",
       "depends_on": [
         "SITE-0001",
         "ART-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
@@ -362,30 +362,37 @@
         "original vector illustration assets/site-versus-funnel-editorial.svg"
       ],
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1334-BATCH2",
+        "reviewed_blob_sha": "9773d93973035d77720be079ec22ded8fbb4e919",
+        "evidence": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0005.md",
+        "reviewed_at": "2026-11-13T13:34:00+02:00",
+        "reason": "No independent 390px/1280px screenshot or interactive/browser verification in this QAD run; producer-only screenshot evidence is not independent acceptance. Paid referral URLs are present, but actual account ownership, merchant approval and geographical eligibility remain unverified; official program documentation is not approval evidence."
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1334-BATCH2",
         "artifact_path": "articles/site123-vs-systeme-io-service-business.html",
-        "real_run_id": "EDT-20261112-ART0005-VISUAL-V5",
-        "summary": "Owner requested fully autonomous premium editorial treatment and removal of dated website-vs-funnel schematic; replaced it with two photographic concept cards within existing ServiceStack ivory/charcoal/ruby identity, removed repeated photo, added visual-source disclosure and a regression test prohibiting the schematic. Affiliate disclosures and sponsored link attributes retained. Additional actual screenshot review revealed unreadable narrow three-column mobile table; converted to 7 responsive comparison cards with visible product labels below 680px, retained desktop semantic table, and added live CSS regression. Final producer screenshot review passed desktop and mobile for photographic comparison and seven readable mobile comparison factors. Cache-busted article stylesheet v5; distinct independent QAD-01 approval still required before indexation.",
-        "tests": "PRODUCER_VISUAL_REVIEW_PASS: real 1280px and 390px screenshots inspected incl. CTA legibility, photographic cards and stacked mobile table; STATIC_PASS + CHROMIUM_28_CASES_PASS in GitHub Actions 43237991576; PAGES_DEPLOY_SUCCESS 43237990367; INDEPENDENT_QAD_01_REVIEW_PENDING",
+        "summary": "EDT/OPS provide dated independent 390px and 1280px visual inspection and browser navigation/link checks, document ownership/eligibility or explicitly avoid implying approved commissions; QAD re-evaluates exact unchanged blob. Preserve disclosure and rel=sponsored nofollow.",
+        "reviewed_blob_sha": "9773d93973035d77720be079ec22ded8fbb4e919",
+        "review_path": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0005.md",
+        "tests": "Static HTML checked: title/canonical/noindex, headings, internal anchor targets, four labeled editorial images, affiliate disclosure, sponsored rel. Mobile screenshot NOT TESTED by QAD; desktop screenshot NOT TESTED by QAD; live browser and affiliate click tracking NOT TESTED.",
         "external_spend_usd": 0
       }
     },
     {
       "id": "ART-0006",
       "title": "Landscaping homepage that wins quote requests: evidence-first sections",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/landscaping-homepage-guide.html",
@@ -399,32 +406,39 @@
       "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
       "producer_role": "EDT-01",
       "producer_run_id": "EDT-20261112-ART0006-HOMEPAGE-V1",
-      "next_owner": "OPS-01",
+      "next_owner": "QAD-01",
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1334-BATCH2",
+        "reviewed_blob_sha": "33208d870f21888fa217a48a8d1b84ac4fc654ae",
+        "evidence": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0006.md",
+        "reviewed_at": "2026-11-13T13:34:00+02:00",
+        "reason": "Reproducible design-governance violation: inline <style> block defines .homepage-brief and .homepage-example despite v3 rule 'One shared canonical stylesheet: assets/editorial.css. No independent inline article CSS.' Tool generator exists but no independent browser click/input/output test or screenshots."
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1334-BATCH2",
         "artifact_path": "articles/landscaping-homepage-guide.html",
-        "real_run_id": "EDT-20261112-ART0006-HOMEPAGE-V1",
-        "summary": "Original landscaping homepage blueprint, documented primary Google sources, labeled AI-generated illustrative asset, original no-network brief generator, linked buyer journey. Separate independent visual/factual QA required; keep noindex.",
-        "tests": "PRODUCER_HTML_REVIEW_ONLY; STATIC_AND_CHROMIUM_CI_PENDING; QAD_NOT_TESTED",
+        "summary": "Move article styling to shared assets/editorial.css with no inline <style>; independently exercise generate-homepage-brief button with empty and populated fields, inspect 390px and 1280px screenshots, check keyboard focus and no overflow. Re-submit with actual test artifacts.",
+        "reviewed_blob_sha": "33208d870f21888fa217a48a8d1b84ac4fc654ae",
+        "review_path": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0006.md",
+        "tests": "Static HTML: title/canonical/noindex, primary headings, original local-only JS generator, two images/alt; browser functionality NOT TESTED; 390px and 1280px screenshots NOT TESTED; CSS policy FAIL.",
         "external_spend_usd": 0
       }
     },
     {
       "id": "ART-0007",
       "title": "Quote form or booking calendar for home-service contractors?",
-      "status": "awaiting_qa",
+      "status": "rework",
       "priority": "P1",
-      "owner": "QAD-01",
+      "owner": "EDT-01",
       "depends_on": [
         "SITE-0001"
       ],
-      "attempts": 0,
+      "attempts": 1,
       "max_attempts": 2,
       "spend_usd": 0,
       "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
@@ -436,19 +450,26 @@
       "acceptance": "Original nonduplicative practical buyer guide with verifiable dated primary sources, premium layout, useful imagery/rights and alt text, disclosure when applicable, transparent evidence/limitations, responsive 390/768/1280/1440, live tools checked if any; producer handoff awaiting separate independent QAD-01 PASS, then OPS release and sitemap update; $0 external spend.",
       "producer_role": "EDT-01",
       "producer_run_id": "EDT-20261113-BATCH5",
-      "next_owner": "OPS-01",
+      "next_owner": "QAD-01",
       "qa": {
-        "decision": null,
-        "evidence": null
+        "decision": "REWORK",
+        "reviewer_role": "QAD-01",
+        "reviewer_run_id": "QAD-20261113-1334-BATCH2",
+        "reviewed_blob_sha": "d9d94651442d2e2060df12f5199d0d2d9b7bcefb",
+        "evidence": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0007.md",
+        "reviewed_at": "2026-11-13T13:34:00+02:00",
+        "reason": "Evidence relevance defect: Google LocalBusiness structured-data documentation is listed as a principal source but does not substantiate quote-form vs calendar scheduling or time-zone/availability recommendations; source list lacks a primary booking-calendar provider reference. Original comparison is practical but vendor-specific booking assertions are not independently documented. Mobile/desktop visuals NOT TESTED."
       },
       "handoff": {
-        "from_role": "EDT-01",
-        "to_role": "QAD-01",
-        "status": "awaiting_qa",
+        "from_role": "QAD-01",
+        "to_role": "EDT-01",
+        "status": "rework",
+        "real_run_id": "QAD-20261113-1334-BATCH2",
         "artifact_path": "articles/contractor-quote-form-vs-booking-calendar.html",
-        "real_run_id": "EDT-20261113-BATCH5",
-        "summary": "Original standalone buyer-facing article with distinct decision framework, sourced vendor/Google claims, editorial images labeled as AI, no paid referral links, staged noindex. Independent factual and visual QA required.",
-        "tests": "SOURCE_LINKS_RESEARCHED; RESPONSIVE_BROWSER_NOT_TESTED; SCREENSHOTS_NOT_TESTED; INDEPENDENT_QA_PENDING",
+        "summary": "Replace unrelated Google structured-data source with a dated official booking/calendar provider help document supporting the specific booking functionality; distinguish editorial workflow advice from vendor facts; independently inspect mobile 390px/desktop 1280px and links. Keep noindex.",
+        "reviewed_blob_sha": "d9d94651442d2e2060df12f5199d0d2d9b7bcefb",
+        "review_path": "orchestrator/reviews/QAD-20261113-1334-BATCH2-ART-0007.md",
+        "tests": "Static HTML: canonical/title/noindex, internal anchor targets, two AI-labeled images and editorial disclosure. 390px/1280px screenshots NOT TESTED; live links NOT TESTED; browser behavior NOT TESTED; source relevance FAIL.",
         "external_spend_usd": 0
       }
     },
